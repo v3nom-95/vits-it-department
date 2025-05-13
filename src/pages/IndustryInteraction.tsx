@@ -127,15 +127,7 @@ const IndustryInteraction = () => {
   ]; */}
 
   const studentInteractions: StudentInteraction[] = [
-    {
-      id: 1,
-      studentName: "Idukuda Venkatapathi Babu",
-      rollNumber: "23891A1225",
-      organization: "Indian Institute of Technology Madras",
-      interactionType: "Course",
-      date: "April 30, 2025",
-      certificate: "/public/iv1.jpeg"
-    },
+    
     {
       id: 2,
       studentName: "Vure Sathvik",
