@@ -48,9 +48,7 @@ const NavBar = () => {
             ))}
           </div>
           
-          <div className="hidden md:flex items-center space-x-4">
-            <a href="#" className="bg-white text-department-purple px-4 py-1 rounded-full text-sm font-medium hover:bg-opacity-90 transition-colors">Student Portal</a>
-          </div>
+          {/* Student Portal button has been removed */}
         </div>
       </div>
     </nav>
