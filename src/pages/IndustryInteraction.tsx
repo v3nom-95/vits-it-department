@@ -135,7 +135,7 @@ const IndustryInteraction = () => {
       organization: "Salesforce",
       interactionType: "Community event",
       date: "April 19, 2025",
-      certificate: "/public/sf.jpeg"
+      certificate: "/sf.jpeg"
     },
     {
       id: 3,
@@ -144,7 +144,7 @@ const IndustryInteraction = () => {
       organization: "Salesforce",
       interactionType: "Community meeting",
       date: "April 19, 2025",
-      certificate: "/public/sf.jpeg"
+      certificate: "/sf.jpeg"
     },
     {
       id: 4,
