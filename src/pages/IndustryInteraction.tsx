@@ -5,7 +5,6 @@ import { Building2, Handshake, Users, Calendar, MapPin, Clock, Eye, X, User, IdC
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import EventCard from '../components/EventCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -184,17 +183,6 @@ const IndustryInteraction = () => {
       description: "Regular industrial visits and expert lectures from industry professionals to keep students updated with current trends and technologies."
     }
   ];
-  
-  const handleEventClick = (event: Event) => {
-    setSelectedEvent(event);
-    setShowEventPhotos(true);
-  };
-  
-  const handleViewAttendees = (event: Event, e: React.MouseEvent) => {
-    e.stopPropagation();
-    setSelectedEvent(event);
-    setShowAttendees(true);
-  };
 
   return (
     <Layout>
@@ -273,36 +261,6 @@ const IndustryInteraction = () => {
           </div>
         </div>
 
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold font-heading text-department-dark mb-6">Student Events</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {studentEvents.map((event) => (
-              <div key={event.id} onClick={() => handleEventClick(event)} className="cursor-pointer">
-                <EventCard
-                  id={event.id}
-                  title={event.title}
-                  description={event.description}
-                  date={event.date}
-                  time={event.time}
-                  location={event.location}
-                  imageSrc={event.imageSrc}
-                />
-                <div className="mt-3">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    onClick={(e) => handleViewAttendees(event, e)}
-                    className="w-full flex items-center justify-center gap-2 border-department-purple text-department-purple hover:bg-department-purple hover:text-white transition-colors"
-                  >
-                    <Users className="h-4 w-4" />
-                    View Attendees ({event.attendees.length})
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div className="bg-gray-50 rounded-lg p-8 mb-16">
           <h2 className="text-2xl font-bold font-heading text-department-dark mb-6">Our Industry Partners</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -314,120 +272,6 @@ const IndustryInteraction = () => {
           </div>
         </div>
       </div>
-
-      {/* Photo Gallery Dialog */}
-      <Dialog open={showEventPhotos} onOpenChange={setShowEventPhotos}>
-        <DialogContent className="max-w-5xl sm:max-w-[900px]">
-          <DialogHeader>
-            <DialogTitle className="text-xl">{selectedEvent?.title} - Gallery</DialogTitle>
-            <DialogDescription>Photos from the event</DialogDescription>
-          </DialogHeader>
-          
-          <div className="mt-6 w-full">
-            <Carousel className="w-full">
-              <CarouselContent>
-                {selectedEvent?.photos.map((photo, index) => (
-                  <CarouselItem key={index}>
-                    <div className="p-1">
-                      <div className="overflow-hidden rounded-md aspect-video">
-                        <img 
-                          src={photo} 
-                          alt={`${selectedEvent.title} photo ${index + 1}`} 
-                          className="w-full h-full object-cover transition-all duration-300 hover:scale-105"
-                          onError={(e) => {
-                            e.currentTarget.src = "https://via.placeholder.com/800x450?text=Event+Photo";
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-2" />
-              <CarouselNext className="right-2" />
-            </Carousel>
-            
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 mt-4">
-              {selectedEvent?.photos.map((photo, index) => (
-                <div key={index} className="overflow-hidden rounded-md aspect-[4/3]">
-                  <img 
-                    src={photo} 
-                    alt={`${selectedEvent.title} thumbnail ${index + 1}`} 
-                    className="w-full h-full object-cover hover:opacity-80 transition-opacity cursor-pointer"
-                    onClick={() => {
-                      // In a real implementation, this would select the image in the carousel
-                      console.log("Selected image", index);
-                    }}
-                    onError={(e) => {
-                      e.currentTarget.src = "https://via.placeholder.com/400x300?text=Event+Photo";
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
-            
-            <div className="flex justify-end mt-6">
-              <Button onClick={() => setShowEventPhotos(false)}>Close</Button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
-
-      {/* Attendees Dialog */}
-      <Dialog open={showAttendees} onOpenChange={setShowAttendees}>
-        <DialogContent className="max-w-md sm:max-w-lg">
-          <DialogHeader>
-            <DialogTitle className="text-xl">{selectedEvent?.title} - Attendees</DialogTitle>
-            <DialogDescription>Students who attended this event</DialogDescription>
-          </DialogHeader>
-          
-          <div className="mt-4">
-            <Tabs defaultValue="list" className="w-full">
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="list">List View</TabsTrigger>
-                <TabsTrigger value="grid">Grid View</TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="list" className="mt-4">
-                <div className="space-y-2">
-                  {selectedEvent?.attendees.map((attendee) => (
-                    <div key={attendee.id} className="flex items-center space-x-4 p-3 bg-gray-50 rounded-md">
-                      <Avatar className="h-10 w-10 border border-gray-200">
-                        <AvatarImage src={attendee.avatar} alt={attendee.name} />
-                        <AvatarFallback>{attendee.name.charAt(0)}{attendee.name.split(' ')[1]?.charAt(0)}</AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <p className="text-sm font-medium">{attendee.name}</p>
-                        <p className="text-xs text-gray-500">{attendee.department}, {attendee.year}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </TabsContent>
-              
-              <TabsContent value="grid" className="mt-4">
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  {selectedEvent?.attendees.map((attendee) => (
-                    <div key={attendee.id} className="flex flex-col items-center text-center p-3 bg-gray-50 rounded-md">
-                      <Avatar className="h-16 w-16 mb-2 border-2 border-department-purple/20">
-                        <AvatarImage src={attendee.avatar} alt={attendee.name} />
-                        <AvatarFallback>{attendee.name.charAt(0)}{attendee.name.split(' ')[1]?.charAt(0)}</AvatarFallback>
-                      </Avatar>
-                      <p className="text-sm font-medium leading-tight">{attendee.name}</p>
-                      <p className="text-xs text-gray-500">{attendee.department}</p>
-                      <p className="text-xs text-gray-500">{attendee.year}</p>
-                    </div>
-                  ))}
-                </div>
-              </TabsContent>
-            </Tabs>
-            
-            <div className="flex justify-end mt-6">
-              <Button onClick={() => setShowAttendees(false)}>Close</Button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </Layout>
   );
 };
