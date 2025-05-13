@@ -11,17 +11,13 @@ const Header = () => {
             <Link to="/" className="flex items-center group">
               <div className="relative">
                 <img 
-                  src="/logo-vignan.png" 
+                  src="public/lovable-uploads/8054dd03-7c03-4985-8821-d59a89a9428d.png" 
                   alt="" 
                   className="h-20 mr-3 transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="text-left hidden md:block">
-                <img
-                  src="public/lovable-uploads/86baccc9-9a9e-445d-98b0-af64e83c68fa.png"
-                  alt=""
-                  className="h-16 transition-transform duration-300 group-hover:scale-105"
-                />
+                {/* Removed the text logo since the new logo includes both the emblem and text */}
               </div>
             </Link>
           </div>
