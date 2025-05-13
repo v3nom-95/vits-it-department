@@ -1,12 +1,13 @@
 
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import { Building2, Handshake, Users, Calendar, MapPin, Clock, Eye, X, User, IdCard } from 'lucide-react';
+import { Building2, Handshake, Users, Calendar, MapPin, Clock, Eye, X, User, IdCard, FileImage } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useToast } from "@/hooks/use-toast";
 import {
   Table,
   TableBody,
@@ -27,6 +28,8 @@ const IndustryInteraction = () => {
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
   const [showEventPhotos, setShowEventPhotos] = useState(false);
   const [showAttendees, setShowAttendees] = useState(false);
+  const [showCertificate, setShowCertificate] = useState<StudentInteraction | null>(null);
+  const { toast } = useToast();
   
   interface Attendee {
     id: number;
@@ -55,6 +58,7 @@ const IndustryInteraction = () => {
     organization: string;
     interactionType: string;
     date: string;
+    certificate?: string;
   }
   
   const studentEvents: Event[] = [
@@ -130,7 +134,8 @@ const IndustryInteraction = () => {
       rollNumber: "20BCS045",
       organization: "Microsoft",
       interactionType: "Internship",
-      date: "April 15, 2025"
+      date: "April 15, 2025",
+      certificate: "https://images.unsplash.com/photo-1527525443983-6e60c75fff46"
     },
     {
       id: 2,
@@ -138,7 +143,8 @@ const IndustryInteraction = () => {
       rollNumber: "21BCS112",
       organization: "Google",
       interactionType: "Industry Visit",
-      date: "March 22, 2025"
+      date: "March 22, 2025",
+      certificate: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
     },
     {
       id: 3,
@@ -146,7 +152,8 @@ const IndustryInteraction = () => {
       rollNumber: "19BIT078",
       organization: "Amazon",
       interactionType: "Workshop",
-      date: "May 10, 2025"
+      date: "May 10, 2025",
+      certificate: "https://images.unsplash.com/photo-1612198273689-46cb4d2c7b94"
     },
     {
       id: 4,
@@ -154,7 +161,8 @@ const IndustryInteraction = () => {
       rollNumber: "20BCE104",
       organization: "IBM",
       interactionType: "Guest Lecture",
-      date: "February 28, 2025"
+      date: "February 28, 2025",
+      certificate: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
     },
     {
       id: 5,
@@ -162,7 +170,8 @@ const IndustryInteraction = () => {
       rollNumber: "21BCS056",
       organization: "Infosys",
       interactionType: "Industry Project",
-      date: "April 5, 2025"
+      date: "April 5, 2025",
+      certificate: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b"
     }
   ];
 
@@ -221,6 +230,7 @@ const IndustryInteraction = () => {
                   <TableHead className="font-bold">Organization</TableHead>
                   <TableHead className="font-bold">Type of Interaction</TableHead>
                   <TableHead className="font-bold">Date</TableHead>
+                  <TableHead className="font-bold">Certificate</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -254,6 +264,19 @@ const IndustryInteraction = () => {
                         {interaction.date}
                       </div>
                     </TableCell>
+                    <TableCell>
+                      {interaction.certificate && (
+                        <Button 
+                          variant="ghost" 
+                          size="sm" 
+                          className="flex items-center gap-2"
+                          onClick={() => setShowCertificate(interaction)}
+                        >
+                          <FileImage size={16} className="text-department-purple" />
+                          View
+                        </Button>
+                      )}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -271,6 +294,46 @@ const IndustryInteraction = () => {
             ))}
           </div>
         </div>
+
+        {/* Certificate Dialog */}
+        {showCertificate && (
+          <Dialog open={showCertificate !== null} onOpenChange={() => setShowCertificate(null)}>
+            <DialogContent className="sm:max-w-2xl">
+              <DialogHeader>
+                <DialogTitle>Certificate/Proof for {showCertificate.interactionType}</DialogTitle>
+                <DialogDescription>
+                  {showCertificate.studentName} - {showCertificate.organization}
+                </DialogDescription>
+              </DialogHeader>
+              <div className="relative w-full aspect-video mt-4 rounded-md overflow-hidden">
+                <img 
+                  src={showCertificate.certificate} 
+                  alt={`Certificate for ${showCertificate.interactionType} at ${showCertificate.organization}`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="flex justify-end gap-2 mt-4">
+                <Button 
+                  className="flex items-center gap-2"
+                  onClick={() => {
+                    toast({
+                      title: "Success!",
+                      description: "Certificate downloaded successfully.",
+                    });
+                  }}
+                >
+                  Download
+                </Button>
+                <Button 
+                  variant="outline" 
+                  onClick={() => setShowCertificate(null)}
+                >
+                  Close
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
+        )}
       </div>
     </Layout>
   );
