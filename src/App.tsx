@@ -19,7 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="will-change-auto">
+        <div className="transform-gpu will-change-auto">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/clubs" element={<Clubs />} />
