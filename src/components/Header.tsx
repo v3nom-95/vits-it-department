@@ -22,7 +22,7 @@ const Header = () => {
               </div>
               <div className="text-left hidden md:block">
                 <img
-                  src="/logo-vignan-text.png"
+                  src="public/lovable-uploads/86baccc9-9a9e-445d-98b0-af64e83c68fa.png"
                   alt="VIGNAN Institute of Technology and Science"
                   className="h-12 transition-transform duration-300 group-hover:scale-105"
                   onError={(e) => {
