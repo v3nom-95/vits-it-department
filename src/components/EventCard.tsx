@@ -1,19 +1,31 @@
 
 import React from 'react';
-import { Calendar, Clock, MapPin, Eye } from 'lucide-react';
+import { Calendar, Clock, MapPin, Eye, User } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-interface EventCardProps {
+export interface EventCardProps {
+  id: number;
   title: string;
   description: string;
   date: string;
   time: string;
   location: string;
   imageSrc?: string;
+  host?: string;
+  onClick?: () => void;
 }
 
-const EventCard = ({ title, description, date, time, location, imageSrc }: EventCardProps) => {
+const EventCard = ({ 
+  title, 
+  description, 
+  date, 
+  time, 
+  location, 
+  imageSrc, 
+  host,
+  onClick 
+}: EventCardProps) => {
   return (
     <Card className="overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl border-none card-hover-effect h-full flex flex-col">
       {imageSrc && (
@@ -46,8 +58,18 @@ const EventCard = ({ title, description, date, time, location, imageSrc }: Event
             <MapPin className="h-4 w-4 mr-2 text-department-purple" />
             <span>{location}</span>
           </div>
+          {host && (
+            <div className="flex items-center text-gray-700">
+              <User className="h-4 w-4 mr-2 text-department-purple" />
+              <span>Host: {host}</span>
+            </div>
+          )}
         </div>
-        <Button variant="outline" className="w-full border-department-purple text-department-purple hover:bg-department-purple hover:text-white flex items-center justify-center gap-2 group">
+        <Button 
+          variant="outline" 
+          className="w-full border-department-purple text-department-purple hover:bg-department-purple hover:text-white flex items-center justify-center gap-2 group"
+          onClick={onClick}
+        >
           <Eye className="h-4 w-4 transition-transform group-hover:scale-110" />
           View Details
         </Button>
