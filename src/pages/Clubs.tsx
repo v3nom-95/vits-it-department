@@ -138,8 +138,8 @@ const Clubs = () => {
       host: "Department of IT",
       imageSrc: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
       photos: [
-        "/public/ng1.jpg",
-        "/public/ng2.jpg",
+        "/ng1.jpg",
+        "/ng2.jpg",
         ""
       ]
     },
