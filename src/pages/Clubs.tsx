@@ -140,7 +140,6 @@ const Clubs = () => {
       photos: [
         "/ng1.jpg",
         "/ng2.jpg",
-        ""
       ]
     },
     {
