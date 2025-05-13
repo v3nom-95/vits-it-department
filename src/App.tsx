@@ -19,14 +19,16 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/clubs" element={<Clubs />} />
-          <Route path="/faculty" element={<Faculty />} />
-          <Route path="/iii" element={<IndustryInteraction />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div className="will-change-auto">
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/clubs" element={<Clubs />} />
+            <Route path="/faculty" element={<Faculty />} />
+            <Route path="/iii" element={<IndustryInteraction />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
