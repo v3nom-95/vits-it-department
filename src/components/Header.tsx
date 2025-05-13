@@ -13,21 +13,14 @@ const Header = () => {
                 <img 
                   src="/logo-vignan.png" 
                   alt="Vignan Institute Logo" 
-                  className="h-16 mr-3 transition-transform duration-300 group-hover:scale-105"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://via.placeholder.com/150x60?text=VIGNAN+LOGO";
-                  }}
+                  className="h-20 mr-3 transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-department-accent group-hover:w-full transition-all duration-300"></div>
               </div>
               <div className="text-left hidden md:block">
                 <img
                   src="public/lovable-uploads/86baccc9-9a9e-445d-98b0-af64e83c68fa.png"
                   alt="VIGNAN Institute of Technology and Science"
-                  className="h-12 transition-transform duration-300 group-hover:scale-105"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://via.placeholder.com/180x50?text=VIGNAN+TEXT";
-                  }}
+                  className="h-16 transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </Link>
@@ -38,18 +31,12 @@ const Header = () => {
                 src="/logo-department-text.png"
                 alt="Department of Information Technology"
                 className="h-12 transition-transform duration-300 hover:scale-105"
-                onError={(e) => {
-                  e.currentTarget.src = "https://via.placeholder.com/180x50?text=IT+DEPARTMENT";
-                }}
               />
             </div>
             <img 
               src="/logo-department.png" 
               alt="IT Department Logo" 
               className="h-20 transition-all duration-300 hover:scale-105"
-              onError={(e) => {
-                e.currentTarget.src = "https://via.placeholder.com/80x80?text=IT+DEPT";
-              }}
             />
           </div>
         </div>
