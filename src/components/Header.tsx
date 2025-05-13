@@ -10,7 +10,7 @@ const Header = () => {
             <Link to="/" className="flex items-center group">
               <div className="relative">
                 <img 
-                  src="public/vg.jpeg" 
+                  src="vg.jpeg" 
                   alt="" 
                   className="h-20 mr-3 transition-transform duration-300 group-hover:scale-105"
                 />
