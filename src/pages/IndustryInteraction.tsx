@@ -1,12 +1,21 @@
+
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import { Building2, Handshake, Users, Calendar, MapPin, Clock, Eye, X } from 'lucide-react';
+import { Building2, Handshake, Users, Calendar, MapPin, Clock, Eye, X, User, IdCard } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import EventCard from '../components/EventCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { 
   Carousel,
   CarouselContent,
@@ -38,6 +47,15 @@ const IndustryInteraction = () => {
     imageSrc: string;
     photos: string[];
     attendees: Attendee[];
+  }
+
+  interface StudentInteraction {
+    id: number;
+    studentName: string;
+    rollNumber: string;
+    organization: string;
+    interactionType: string;
+    date: string;
   }
   
   const studentEvents: Event[] = [
@@ -106,6 +124,49 @@ const IndustryInteraction = () => {
     }
   ];
 
+  const studentInteractions: StudentInteraction[] = [
+    {
+      id: 1,
+      studentName: "Aditya Sharma",
+      rollNumber: "20BCS045",
+      organization: "Microsoft",
+      interactionType: "Internship",
+      date: "April 15, 2025"
+    },
+    {
+      id: 2,
+      studentName: "Priya Patel",
+      rollNumber: "21BCS112",
+      organization: "Google",
+      interactionType: "Industry Visit",
+      date: "March 22, 2025"
+    },
+    {
+      id: 3,
+      studentName: "Rahul Verma",
+      rollNumber: "19BIT078",
+      organization: "Amazon",
+      interactionType: "Workshop",
+      date: "May 10, 2025"
+    },
+    {
+      id: 4,
+      studentName: "Sneha Gupta",
+      rollNumber: "20BCE104",
+      organization: "IBM",
+      interactionType: "Guest Lecture",
+      date: "February 28, 2025"
+    },
+    {
+      id: 5,
+      studentName: "Vikram Singh",
+      rollNumber: "21BCS056",
+      organization: "Infosys",
+      interactionType: "Industry Project",
+      date: "April 5, 2025"
+    }
+  ];
+
   const interactions = [
     {
       title: "Industry Partnerships",
@@ -158,6 +219,58 @@ const IndustryInteraction = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Student Interaction Records Section */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold font-heading text-department-dark mb-6">Student Industry Interactions</h2>
+          <div className="overflow-x-auto">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="font-bold">Student Name</TableHead>
+                  <TableHead className="font-bold">Roll Number</TableHead>
+                  <TableHead className="font-bold">Organization</TableHead>
+                  <TableHead className="font-bold">Type of Interaction</TableHead>
+                  <TableHead className="font-bold">Date</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {studentInteractions.map((interaction) => (
+                  <TableRow key={interaction.id}>
+                    <TableCell className="flex items-center gap-2">
+                      <User size={16} className="text-department-purple" />
+                      {interaction.studentName}
+                    </TableCell>
+                    <TableCell>
+                      <div className="flex items-center gap-2">
+                        <IdCard size={16} className="text-department-purple" />
+                        {interaction.rollNumber}
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className="flex items-center gap-2">
+                        <Building2 size={16} className="text-department-purple" />
+                        {interaction.organization}
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className="flex items-center gap-2">
+                        <Handshake size={16} className="text-department-purple" />
+                        {interaction.interactionType}
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className="flex items-center gap-2">
+                        <Calendar size={16} className="text-department-purple" />
+                        {interaction.date}
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
         </div>
 
         <div className="mb-16">
