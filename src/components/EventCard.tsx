@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Calendar, Clock, MapPin, Eye, User } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -42,7 +41,7 @@ const EventCard = ({
         </div>
       )}
       <CardContent className="p-6 flex flex-col flex-grow">
-        <div className="bg-department-purple/5 p-1 inline-block rounded-md text-xs font-medium text-department-purple mb-2">Upcoming Event</div>
+        {/* <div className="bg-department-purple/5 p-1 inline-block rounded-md text-xs font-medium text-department-purple mb-2">Upcoming Event</div> */}
         <h3 className="text-xl font-bold font-heading mb-3 text-department-dark">{title}</h3>
         <p className="text-gray-600 mb-5 line-clamp-3">{description}</p>
         <div className="space-y-2 text-sm mb-5 mt-auto">

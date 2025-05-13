@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -24,9 +23,9 @@ const Header = () => {
           <div className="flex items-center">
             <div className="mr-4 hidden md:block">
               <img
-                src="/logo-department-text.png"
+                src="vait-logo.png"
                 alt=""
-                className="h-12 transition-transform duration-300 hover:scale-105"
+                className="h-20 transition-transform duration-300 hover:scale-105"
               />
             </div>
             <img 

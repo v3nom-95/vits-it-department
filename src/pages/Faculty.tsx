@@ -1,30 +1,27 @@
-
 import React from 'react';
 import Layout from '../components/Layout';
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Mail, BookOpen, Award, ExternalLink } from 'lucide-react';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const Faculty = () => {
   const facultyMembers = [
     {
       id: 1,
-      name: "Dr. Arun Sharma",
+      name: "Prof. B.V. Chowdary  ",
       position: "Head of Department",
-      qualification: "Ph.D. in Computer Science",
+      qualification: "Ph.D. in Computer Science Engineering",
       experience: "15+ years of teaching and research experience",
-      specialization: "Artificial Intelligence, Machine Learning",
-      email: "arun.sharma@vits.ac.in",
+      specialization: "Data Mining, Machine Learning",
+      email: "",
       publications: 24,
       awards: "Best Researcher Award 2022",
-      image: "/faculty1.png"
+      image: "/BV-IT-HOD.jpg"
     },
     {
       id: 2,
-      name: "Prof. Meena Gupta",
+      name: "Dr. M. Prabhakar",
       position: "Associate Professor",
-      qualification: "M.Tech in Information Technology",
+      qualification: "Ph.D.",
       experience: "12 years of teaching experience",
       specialization: "Database Management Systems, Data Mining",
       email: "meena.gupta@vits.ac.in",
@@ -34,9 +31,9 @@ const Faculty = () => {
     },
     {
       id: 3,
-      name: "Dr. Rajesh Kumar",
-      position: "Assistant Professor",
-      qualification: "Ph.D. in Computer Engineering",
+      name: "Dr. B. Naveen Kumar",
+      position: "Associate Professor",
+      qualification: "Ph.D.",
       experience: "8 years of teaching and 4 years of industry experience",
       specialization: "Computer Networks, Cloud Computing",
       email: "rajesh.kumar@vits.ac.in",
@@ -46,7 +43,7 @@ const Faculty = () => {
     },
     {
       id: 4,
-      name: "Prof. Sanjay Verma",
+      name: "Mr. Sk. Khaleelullah",
       position: "Assistant Professor",
       qualification: "M.Tech in Computer Science",
       experience: "9 years of teaching experience",
@@ -58,7 +55,7 @@ const Faculty = () => {
     },
     {
       id: 5,
-      name: "Dr. Priya Singh",
+      name: "Mrs. T. Aruna",
       position: "Assistant Professor",
       qualification: "Ph.D. in Information Security",
       experience: "7 years of teaching and research experience",
@@ -70,7 +67,7 @@ const Faculty = () => {
     },
     {
       id: 6,
-      name: "Prof. Amit Kumar",
+      name: "Mr. J. Srikanth",
       position: "Assistant Professor",
       qualification: "M.Tech in Software Engineering",
       experience: "6 years of teaching and 3 years of industry experience",
@@ -79,6 +76,54 @@ const Faculty = () => {
       publications: 6,
       awards: "Innovation Award 2021",
       image: "/faculty6.png"
+    },
+    {
+      id: 7,
+      name: "Mr. A. Sankar Reddy",
+      position: "Assistant Professor",
+      qualification: "Ph.D. in Artificial Intelligence",
+      experience: "10 years of teaching and 5 years of research experience",
+      specialization: "Artificial Intelligence, Natural Language Processing",
+      email: "anjali.mehta@vits.ac.in",
+      publications: 20,
+      awards: "AI Research Excellence Award 2023",
+      image: "/faculty7.png"
+    },
+    {
+      id: 8,
+      name: "Mr. M.S.B Kasyapa",
+      position: "Assistant Professor",
+      qualification: "Ph.D. in Data Science",
+      experience: "8 years of teaching experience",
+      specialization: "Big Data Analytics, Predictive Modeling",
+      email: "rajiv.menon@vits.ac.in",
+      publications: 14,
+      awards: "Data Science Innovator Award 2022",
+      image: "/faculty8.png"
+    },
+    {
+      id: 9,
+      name: "Mr. G. Ramakrishna",
+      position: "Assistant Professor",
+      qualification: "M.Tech in Information Technology",
+      experience: "5 years of teaching experience",
+      specialization: "Web Development, UI/UX Design",
+      email: "kavita.sharma@vits.ac.in",
+      publications: 5,
+      awards: "Best Educator Award 2021",
+      image: "/faculty9.png"
+    },
+    {
+      id: 10,
+      name: "Mrs. Ch. Sai Vijaya",
+      position: "Assistant Professor",
+      qualification: "M.Tech in Software Systems",
+      experience: "4 years of teaching and 2 years of industry experience",
+      specialization: "Software Development, Agile Methodologies",
+      email: "arjun.patel@vits.ac.in",
+      publications: 3,
+      awards: "Emerging Educator Award 2023",
+      image: "/faculty10.png"
     }
   ];
 
@@ -104,64 +149,21 @@ const Faculty = () => {
           {facultyMembers.map((faculty) => (
             <Card key={faculty.id} className="overflow-hidden shadow-md card-hover-effect">
               <CardContent className="p-0">
-                <div className={`bg-gradient-to-r ${faculty.id % 2 === 0 ? 'from-department-blue/5 to-department-blue/10' : 'from-department-purple/5 to-department-purple/10'} p-6 flex items-center gap-4 border-b`}>
-                  <HoverCard>
-                    <HoverCardTrigger asChild>
-                      <div className="cursor-pointer">
-                        <Avatar className="h-20 w-20 border-2 border-white shadow-md">
-                          <AvatarFallback className={`${faculty.id % 2 === 0 ? 'bg-department-blue' : 'bg-department-purple'} text-white text-xl`}>
-                            {faculty.name.split(' ').map(n => n[0]).join('')}
-                          </AvatarFallback>
-                        </Avatar>
-                      </div>
-                    </HoverCardTrigger>
-                    <HoverCardContent className="w-80">
-                      <div className="flex justify-between space-x-4">
-                        <Avatar className="h-12 w-12">
-                          <AvatarFallback className={`${faculty.id % 2 === 0 ? 'bg-department-blue' : 'bg-department-purple'} text-white`}>
-                            {faculty.name.split(' ').map(n => n[0]).join('')}
-                          </AvatarFallback>
-                        </Avatar>
-                        <div className="space-y-1">
-                          <h4 className="text-sm font-semibold">{faculty.name}</h4>
-                          <p className="text-sm text-muted-foreground">
-                            {faculty.publications} publications · {faculty.experience}
-                          </p>
-                          <div className="flex items-center pt-2">
-                            <Award className="mr-1 h-3.5 w-3.5 text-department-purple" />
-                            <span className="text-xs text-muted-foreground">{faculty.awards}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </HoverCardContent>
-                  </HoverCard>
+                <div className={`bg-gradient-to-r ${faculty.id % 2 === 0 ? 'from-department-blue/5 to-department-blue/10' : 'from-department-purple/5 to-department-purple/10'} p-6 flex items-center gap-4`}>
+                  <Avatar className="h-20 w-20 border-2 border-white shadow-md">
+                    {faculty.image ? (
+                      <img src={faculty.image} className="h-full w-full object-cover rounded-full" />
+                    ) : (
+                      <AvatarFallback className={`${faculty.id % 2 === 0 ? 'bg-department-blue' : 'bg-department-purple'} text-white text-xl font-bold`}>
+                        {faculty.name.split(' ').length > 1
+                          ? faculty.name.split(' ')[0][0] + faculty.name.split(' ')[1][0]
+                          : faculty.name.slice(0, 2).toUpperCase()}
+                      </AvatarFallback>
+                    )}
+                  </Avatar>
                   <div>
                     <h3 className="font-semibold text-lg font-heading">{faculty.name}</h3>
                     <p className={`${faculty.id % 2 === 0 ? 'text-department-blue' : 'text-department-purple'} font-medium`}>{faculty.position}</p>
-                  </div>
-                </div>
-                <div className="p-5 space-y-4">
-                  <div>
-                    <p className="font-medium">Qualification</p>
-                    <p className="text-gray-600">{faculty.qualification}</p>
-                  </div>
-                  <div>
-                    <p className="font-medium">Specialization</p>
-                    <p className="text-gray-600">{faculty.specialization}</p>
-                  </div>
-                  <div className="pt-2 flex flex-wrap gap-4">
-                    <a href={`mailto:${faculty.email}`} className="flex items-center text-sm text-gray-600 hover:text-department-purple">
-                      <Mail className="h-4 w-4 mr-1" />
-                      <span>Email</span>
-                    </a>
-                    <a href="#" className="flex items-center text-sm text-gray-600 hover:text-department-blue">
-                      <BookOpen className="h-4 w-4 mr-1" />
-                      <span>Publications</span>
-                    </a>
-                    <a href="#" className="flex items-center text-sm text-gray-600 hover:text-department-purple">
-                      <ExternalLink className="h-4 w-4 mr-1" />
-                      <span>Profile</span>
-                    </a>
                   </div>
                 </div>
               </CardContent>

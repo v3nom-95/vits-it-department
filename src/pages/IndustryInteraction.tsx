@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { Building2, Handshake, Users, Calendar, MapPin, Clock, Eye, X, User, IdCard, FileImage } from 'lucide-react';
@@ -61,7 +60,7 @@ const IndustryInteraction = () => {
     certificate?: string;
   }
   
-  const studentEvents: Event[] = [
+  {/*const studentEvents: Event[] = [
     {
       id: 1,
       title: "Industry Expert Talk on AI",
@@ -125,53 +124,98 @@ const IndustryInteraction = () => {
         { id: 15, name: "Tanvi Gupta", department: "IT", year: "4th Year", avatar: "https://i.pravatar.cc/150?img=29" }
       ]
     }
-  ];
+  ]; */}
 
   const studentInteractions: StudentInteraction[] = [
     {
       id: 1,
-      studentName: "Aditya Sharma",
-      rollNumber: "20BCS045",
-      organization: "Microsoft",
-      interactionType: "Internship",
-      date: "April 15, 2025",
-      certificate: "https://images.unsplash.com/photo-1527525443983-6e60c75fff46"
+      studentName: "Idukuda Venkatapathi Babu",
+      rollNumber: "23891A1225",
+      organization: "Indian Institute of Technology Madras",
+      interactionType: "Course",
+      date: "April 30, 2025",
+      certificate: "/public/iv1.jpeg"
     },
     {
       id: 2,
-      studentName: "Priya Patel",
-      rollNumber: "21BCS112",
-      organization: "Google",
-      interactionType: "Industry Visit",
-      date: "March 22, 2025",
-      certificate: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+      studentName: "Vure Sathvik",
+      rollNumber: "23891A1264",
+      organization: "Salesforce",
+      interactionType: "Community event",
+      date: "April 19, 2025",
+      certificate: "/public/sf.jpeg"
     },
     {
       id: 3,
-      studentName: "Rahul Verma",
-      rollNumber: "19BIT078",
-      organization: "Amazon",
-      interactionType: "Workshop",
-      date: "May 10, 2025",
-      certificate: "https://images.unsplash.com/photo-1612198273689-46cb4d2c7b94"
+      studentName: "Idukuda Venkatapathi Babu",
+      rollNumber: "23891A1225",
+      organization: "Salesforce",
+      interactionType: "Community meeting",
+      date: "April 19, 2025",
+      certificate: "/public/sf.jpeg"
     },
     {
       id: 4,
-      studentName: "Sneha Gupta",
-      rollNumber: "20BCE104",
-      organization: "IBM",
-      interactionType: "Guest Lecture",
-      date: "February 28, 2025",
+      studentName: "B.Pavan babu",
+      rollNumber: "22891A1207",
+      organization: "Rao Associatis",
+      interactionType: "Internship",
+      date: "February 24, 2025",
       certificate: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
     },
     {
       id: 5,
-      studentName: "Vikram Singh",
-      rollNumber: "21BCS056",
-      organization: "Infosys",
-      interactionType: "Industry Project",
-      date: "April 5, 2025",
+      studentName: "M Sai Rithika",
+      rollNumber: "22891A1232",
+      organization: "StartupIndia",
+      interactionType: "Internship",
+      date: "January - March, 2025",
       certificate: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b"
+    },
+    {
+      id: 6,
+      studentName: "Chiluveru Navya Sri",
+      rollNumber: "22891A1213",
+      organization: "StartupIndia",
+      interactionType: "Internship",
+      date: "January - March, 2025",
+      certificate: "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+    },
+    {
+      id: 7,
+      studentName: "Sai Rishika Madala",
+      rollNumber: "22891A1251",
+      organization: "SatrtupIndia",
+      interactionType: "Internship",
+      date: "January - March, 2025",
+      certificate: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308"
+    },
+    {
+      id: 8,
+      studentName: "Abhitej Salla",
+      rollNumber: "23891A1201",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 5, 2025",
+      certificate: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca"
+    },
+    {
+      id: 9,
+      studentName: "Buram Sai Rishika",
+      rollNumber: "23891A1213",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 5, 2025",
+      certificate: "https://images.unsplash.com/photo-1503676382389-4809596d5290"
+    },
+    {
+      id: 10,
+      studentName: "Konduri Mohith",
+      rollNumber: "23891A1232",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 5, 2025",
+      certificate: "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6"
     }
   ];
 
@@ -284,17 +328,6 @@ const IndustryInteraction = () => {
           </div>
         </div>
 
-        <div className="bg-gray-50 rounded-lg p-8 mb-16">
-          <h2 className="text-2xl font-bold font-heading text-department-dark mb-6">Our Industry Partners</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <div key={item} className="bg-white rounded-lg p-4 flex items-center justify-center h-24 shadow-sm hover:shadow-md transition-shadow">
-                <div className="text-gray-400 text-lg font-medium">Partner {item}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Certificate Dialog */}
         {showCertificate && (
           <Dialog open={showCertificate !== null} onOpenChange={() => setShowCertificate(null)}>
@@ -313,17 +346,6 @@ const IndustryInteraction = () => {
                 />
               </div>
               <div className="flex justify-end gap-2 mt-4">
-                <Button 
-                  className="flex items-center gap-2"
-                  onClick={() => {
-                    toast({
-                      title: "Success!",
-                      description: "Certificate downloaded successfully.",
-                    });
-                  }}
-                >
-                  Download
-                </Button>
                 <Button 
                   variant="outline" 
                   onClick={() => setShowCertificate(null)}

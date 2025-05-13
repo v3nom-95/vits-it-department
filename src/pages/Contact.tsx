@@ -76,7 +76,7 @@ const Contact = () => {
                 <div className="space-y-3">
                   <p className="flex items-center">
                     <span className="font-medium w-20">Phone:</span>
-                    <span>+91 8765432190</span>
+                    <span>+91 0000000000</span>
                   </p>
                   <p className="flex items-center">
                     <span className="font-medium w-20">Email:</span>

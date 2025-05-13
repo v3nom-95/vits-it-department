@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -40,47 +39,58 @@ const Clubs = () => {
   const clubs: Club[] = [
     {
       id: 1,
-      name: "CodeCraft",
+      name: "InfyCoder",
       description: "A programming club focused on competitive coding, algorithm development, and problem-solving.",
-      coordinator: "Prof. Ravi Kumar",
-      meetingSchedule: "Every Friday, 4:00 PM - 6:00 PM",
+      coordinator: "Shaik Khaleelullah",
+      meetingSchedule: "Every Saturday, 2:00 PM - 3:30 PM",
       activities: ["Weekly coding challenges", "Hackathons", "Guest lectures from industry experts"],
       color: "purple",
       members: 45,
-      established: "2020"
+      established: "2022"
     },
     {
       id: 2,
-      name: "CyberShield",
-      description: "Cybersecurity enthusiast club exploring network security, ethical hacking, and digital forensics.",
-      coordinator: "Dr. Priya Sharma",
-      meetingSchedule: "Every Tuesday, 3:00 PM - 5:00 PM",
-      activities: ["CTF competitions", "Security workshops", "Security audit projects"],
+      name: "SpeakEasy club",
+      description: "A club focussed on improving your verbal",
+      coordinator: "Shaik Khaleelullah",
+      meetingSchedule: "Every Tuesday, 3:30 PM - 5:30 PM",
+      activities: ["Seminars", "Presentations", "JAM sessions"],
       color: "blue",
       members: 32,
-      established: "2021"
+      established: "2022"
     },
     {
       id: 3,
-      name: "WebWizards",
-      description: "Web development club focusing on frontend, backend technologies and modern web frameworks.",
-      coordinator: "Prof. Anand Verma",
-      meetingSchedule: "Every Wednesday, 4:00 PM - 6:00 PM",
-      activities: ["Web project collaborations", "UI/UX design sessions", "Web technology workshops"],
+      name: "NextGen Innovators",
+      description: "A club focussed on technical innovations and startups.",
+      coordinator: "Shaik Khaleelullah",
+      meetingSchedule: "Every Wednesday, 2:00 PM - 3:30 PM",
+      activities: ["IEP sessions", "Industry 4.0 sessions", "E-Summits"],
       color: "purple",
       members: 38,
-      established: "2019"
+      established: "2024"
     },
     {
       id: 4,
-      name: "AI Innovators",
-      description: "Exploring artificial intelligence, machine learning, and data science applications.",
-      coordinator: "Dr. Sneha Patel",
-      meetingSchedule: "Every Thursday, 3:30 PM - 5:30 PM",
-      activities: ["AI project development", "Research paper discussions", "ML model implementation workshops"],
+      name: "Arts Club",
+      description: "A club that unleashes the artistic you.",
+      coordinator: "Shaik Khaleelullah",
+      meetingSchedule: "Every Thursday, 3:30 PM - 5:00 PM",
+      activities: ["Poster making", "Drawing competitions", "Quizzes"],
       color: "blue",
       members: 40,
-      established: "2020"
+      established: "2022"
+    },
+    {
+      id: 5,
+      name: "Sports club",
+      description: "A club dedicated to sports, fitness, and athletic events for students.",
+      coordinator: "Shaik Khaleelullah",
+      meetingSchedule: "Every Friday, 4:00 PM - 5:30 PM",
+      activities: ["Football matches", "Cricket tournaments", "Athletics training"],
+      color: "purple",
+      members: 30,
+      established: "2022"
     }
   ];
 
@@ -119,23 +129,23 @@ const Clubs = () => {
     },
     {
       id: 3,
-      clubId: 2, // CyberShield
-      title: "Capture The Flag Competition",
-      description: "Test your cybersecurity skills in this challenging CTF competition. Solve security puzzles, crack codes, and find vulnerabilities.",
-      date: "June 22, 2025",
-      time: "10:00 AM - 4:00 PM",
-      location: "Computer Lab C",
-      host: "Dr. Priya Sharma",
+      clubId: 3, // NextGen Innovators
+      title: "Innovation and Entrepreneurship Session",
+      description: "A session on the latest trends in technology and entrepreneurship. Learn how to turn your ideas into successful startups.",
+      date: "Feb 10, 2025",
+      time: "09:00 AM - 3:30 PM",
+      location: "Room B-603",
+      host: "Department of IT",
       imageSrc: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
       photos: [
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-        "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-        "https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+        "/public/ng1.jpg",
+        "/public/ng2.jpg",
+        ""
       ]
     },
     {
       id: 4,
-      clubId: 3, // WebWizards
+      clubId: 1, // WebWizards
       title: "Frontend Framework Seminar",
       description: "Introduction to modern frontend frameworks including React, Vue, and Angular. Learn about component-based architecture and state management.",
       date: "July 12, 2025",
@@ -151,7 +161,7 @@ const Clubs = () => {
     },
     {
       id: 5,
-      clubId: 4, // AI Innovators
+      clubId: 1, // AI Innovators
       title: "Machine Learning Hackathon",
       description: "Apply your ML skills to solve real-world problems in this day-long hackathon. Datasets provided, bring your laptop and creativity!",
       date: "June 29, 2025",
@@ -167,7 +177,7 @@ const Clubs = () => {
     },
     {
       id: 6,
-      clubId: 4, // AI Innovators
+      clubId: 1, // AI Innovators
       title: "AI Ethics Panel Discussion",
       description: "Join industry experts and academics for a thought-provoking discussion on the ethical implications of artificial intelligence.",
       date: "July 18, 2025",
@@ -179,6 +189,38 @@ const Clubs = () => {
         "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
         "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
         "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
+      ]
+    },
+    {
+      id: 7,
+      clubId: 5, // Sports club
+      title: "Annual Sports Meet",
+      description: "A grand event featuring multiple sports competitions including football, cricket, and athletics.",
+      date: "August 20, 2025",
+      time: "9:00 AM - 5:00 PM",
+      location: "Main Sports Ground",
+      host: "Sports Committee",
+      imageSrc: "https://images.unsplash.com/photo-1505843279827-4b1d06b7a6c6",
+      photos: [
+        "https://images.unsplash.com/photo-1505843279827-4b1d06b7a6c6",
+        "https://images.unsplash.com/photo-1517649763962-0c623066013b",
+        "https://images.unsplash.com/photo-1464983953574-0892a716854b"
+      ]
+    },
+    {
+      id: 8,
+      clubId: 5, // Sports club
+      title: "Inter-Department Cricket Tournament",
+      description: "Departments compete in a knockout cricket tournament. Open to all students!",
+      date: "September 10, 2025",
+      time: "2:00 PM - 6:00 PM",
+      location: "Cricket Ground",
+      host: "Sports club",
+      imageSrc: "https://images.unsplash.com/photo-1517649763962-0c623066013b",
+      photos: [
+        "https://images.unsplash.com/photo-1517649763962-0c623066013b",
+        "https://images.unsplash.com/photo-1505843279827-4b1d06b7a6c6",
+        "https://images.unsplash.com/photo-1464983953574-0892a716854b"
       ]
     }
   ];
@@ -270,7 +312,7 @@ const Clubs = () => {
               {selectedClub?.id === club.id && (
                 <div className="mt-6 mb-10">
                   <h3 className={`text-xl font-bold mb-4 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'}`}>
-                    {club.name} Events
+                    {club.name} 
                   </h3>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {getClubEvents(club.id).map(event => (
@@ -288,7 +330,7 @@ const Clubs = () => {
                       />
                     ))}
                   </div>
-                  {getClubEvents(club.id).length === 0 && (
+                  {getClubEvents(club.id).length === 0 && club.id !== 1 && (
                     <p className="text-gray-500 italic">No upcoming events for this club.</p>
                   )}
                 </div>
