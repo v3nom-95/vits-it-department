@@ -12,14 +12,14 @@ const Header = () => {
               <div className="relative">
                 <img 
                   src="/logo-vignan.png" 
-                  alt="Vignan Institute Logo" 
+                  alt="" 
                   className="h-20 mr-3 transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="text-left hidden md:block">
                 <img
                   src="public/lovable-uploads/86baccc9-9a9e-445d-98b0-af64e83c68fa.png"
-                  alt="VIGNAN Institute of Technology and Science"
+                  alt=""
                   className="h-16 transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
@@ -29,13 +29,13 @@ const Header = () => {
             <div className="mr-4 hidden md:block">
               <img
                 src="/logo-department-text.png"
-                alt="Department of Information Technology"
+                alt=""
                 className="h-12 transition-transform duration-300 hover:scale-105"
               />
             </div>
             <img 
               src="/logo-department.png" 
-              alt="IT Department Logo" 
+              alt="" 
               className="h-20 transition-all duration-300 hover:scale-105"
             />
           </div>
