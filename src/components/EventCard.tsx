@@ -1,5 +1,8 @@
 
 import React from 'react';
+import { Calendar, Clock, MapPin } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 interface EventCardProps {
   title: string;
@@ -12,38 +15,42 @@ interface EventCardProps {
 
 const EventCard = ({ title, description, date, time, location, imageSrc }: EventCardProps) => {
   return (
-    <div className="border rounded-lg overflow-hidden shadow-md mb-6 bg-white">
+    <Card className="overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl border-none card-hover-effect">
       {imageSrc && (
         <div className="h-48 overflow-hidden">
           <img 
             src={imageSrc} 
             alt={title} 
-            className="w-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
             onError={(e) => {
               e.currentTarget.src = "https://via.placeholder.com/400x200?text=Event+Image";
             }}
           />
         </div>
       )}
-      <div className="p-4">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        <div className="space-y-2 text-sm">
-          <p className="flex items-start">
-            <span className="font-semibold w-20">Date:</span>
+      <CardContent className="p-6">
+        <div className="bg-department-purple/5 p-1 inline-block rounded-md text-xs font-medium text-department-purple mb-2">Upcoming Event</div>
+        <h3 className="text-xl font-bold font-heading mb-3 text-department-dark">{title}</h3>
+        <p className="text-gray-600 mb-5 line-clamp-3">{description}</p>
+        <div className="space-y-2 text-sm mb-5">
+          <div className="flex items-center text-gray-700">
+            <Calendar className="h-4 w-4 mr-2 text-department-purple" />
             <span>{date}</span>
-          </p>
-          <p className="flex items-start">
-            <span className="font-semibold w-20">Time:</span>
+          </div>
+          <div className="flex items-center text-gray-700">
+            <Clock className="h-4 w-4 mr-2 text-department-purple" />
             <span>{time}</span>
-          </p>
-          <p className="flex items-start">
-            <span className="font-semibold w-20">Location:</span>
+          </div>
+          <div className="flex items-center text-gray-700">
+            <MapPin className="h-4 w-4 mr-2 text-department-purple" />
             <span>{location}</span>
-          </p>
+          </div>
         </div>
-      </div>
-    </div>
+        <Button variant="outline" className="w-full border-department-purple text-department-purple hover:bg-department-purple hover:text-white">
+          Learn More
+        </Button>
+      </CardContent>
+    </Card>
   );
 };
 
