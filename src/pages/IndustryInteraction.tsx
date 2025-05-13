@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { Building2, Handshake, Users, Calendar, MapPin, Clock, Eye, X } from 'lucide-react';
@@ -167,6 +166,7 @@ const IndustryInteraction = () => {
             {studentEvents.map((event) => (
               <div key={event.id} onClick={() => handleEventClick(event)} className="cursor-pointer">
                 <EventCard
+                  id={event.id}
                   title={event.title}
                   description={event.description}
                   date={event.date}
