@@ -26,7 +26,7 @@ const Index = () => {
             </div>
             <div className="md:w-1/2 animate-fade-in transform-gpu will-change-auto" style={{ animationDelay: '0.2s' }}>
               <img 
-                src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" 
+                src="/pr.jpeg" 
                 alt="IT Department" 
                 className="rounded-lg shadow-2xl w-full h-auto transform-gpu will-change-auto"
               />
