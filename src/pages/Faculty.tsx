@@ -51,7 +51,7 @@ const Faculty = () => {
       email: "sanjay.verma@vits.ac.in",
       publications: 8,
       awards: "Best Project Mentor 2023",
-      image: "/faculty4.png"
+      image: "/sk.jpeg"
     },
     {
       id: 5,
