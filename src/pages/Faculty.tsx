@@ -75,7 +75,7 @@ const Faculty = () => {
       email: "amit.kumar@vits.ac.in",
       publications: 6,
       awards: "Innovation Award 2021",
-      image: "/faculty6.png"
+      image: "/srik.jpeg"
     },
     {
       id: 7,
@@ -123,8 +123,20 @@ const Faculty = () => {
       email: "arjun.patel@vits.ac.in",
       publications: 3,
       awards: "Emerging Educator Award 2023",
-      image: "/faculty10.png"
-    }
+      image: "/vijaya.jpeg"
+    },
+    {
+      id: 11,
+      name: "Mr. G. Chanakya",
+      position: "Assistant Professor",
+      qualification: "M.Tech in Artificial Intelligence",
+      experience: "5 years of teaching and 2 years of research experience",
+      specialization: "Deep Learning, Computer Vision",
+      email: "chanakya.g@vits.ac.in",
+      publications: 10,
+      awards: "AI Educator Award 2024",
+      image: "/chan.jpeg"
+    },
   ];
 
   return (

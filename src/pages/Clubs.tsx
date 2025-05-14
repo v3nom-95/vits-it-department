@@ -23,7 +23,7 @@ interface Club {
   id: number;
   name: string;
   description: string;
-  coordinator: string;
+  studentCoordinators: string[];
   meetingSchedule: string;
   activities: string[];
   color: string;
@@ -41,7 +41,7 @@ const Clubs = () => {
       id: 1,
       name: "InfyCoder",
       description: "A programming club focused on competitive coding, algorithm development, and problem-solving.",
-      coordinator: "Shaik Khaleelullah",
+      studentCoordinators: ["John Doe", "Jane Smith", "Alice Johnson", "Bob Brown", "Charlie Davis"],
       meetingSchedule: "Every Saturday, 2:00 PM - 3:30 PM",
       activities: ["Weekly coding challenges", "Hackathons", "Guest lectures from industry experts"],
       color: "purple",
@@ -52,7 +52,7 @@ const Clubs = () => {
       id: 2,
       name: "SpeakEasy club",
       description: "A club focussed on improving your verbal",
-      coordinator: "Shaik Khaleelullah",
+      studentCoordinators: ["John Doe", "Jane Smith", "Alice Johnson", "Bob Brown", "Charlie Davis"],
       meetingSchedule: "Every Tuesday, 3:30 PM - 5:30 PM",
       activities: ["Seminars", "Presentations", "JAM sessions"],
       color: "blue",
@@ -63,7 +63,7 @@ const Clubs = () => {
       id: 3,
       name: "NextGen Innovators",
       description: "A club focussed on technical innovations and startups.",
-      coordinator: "Shaik Khaleelullah",
+      studentCoordinators: ["Venkatapathi Babu", " Vure Sathvik", "Md. Mudassir", "K. Rakesh Reddy", "K. Nikhil Jai"],
       meetingSchedule: "Every Wednesday, 2:00 PM - 3:30 PM",
       activities: ["IEP sessions", "Industry 4.0 sessions", "E-Summits"],
       color: "purple",
@@ -74,7 +74,7 @@ const Clubs = () => {
       id: 4,
       name: "Arts Club",
       description: "A club that unleashes the artistic you.",
-      coordinator: "Shaik Khaleelullah",
+      studentCoordinators: ["John Doe", "Jane Smith", "Alice Johnson", "Bob Brown", "Charlie Davis"],
       meetingSchedule: "Every Thursday, 3:30 PM - 5:00 PM",
       activities: ["Poster making", "Drawing competitions", "Quizzes"],
       color: "blue",
@@ -85,7 +85,7 @@ const Clubs = () => {
       id: 5,
       name: "Sports club",
       description: "A club dedicated to sports, fitness, and athletic events for students.",
-      coordinator: "Shaik Khaleelullah",
+      studentCoordinators: ["John Doe", "Jane Smith", "Alice Johnson", "Bob Brown", "Charlie Davis"],
       meetingSchedule: "Every Friday, 4:00 PM - 5:30 PM",
       activities: ["Football matches", "Cricket tournaments", "Athletics training"],
       color: "purple",
@@ -130,9 +130,9 @@ const Clubs = () => {
     {
       id: 3,
       clubId: 3, // NextGen Innovators
-      title: "Innovation and Entrepreneurship Session",
+      title: "Design Thinking Workshop",
       description: "A session on the latest trends in technology and entrepreneurship. Learn how to turn your ideas into successful startups.",
-      date: "Feb 10, 2025",
+      date: "December 4, 2024",
       time: "09:00 AM - 3:30 PM",
       location: "Room B-603",
       host: "Department of IT",
@@ -144,18 +144,16 @@ const Clubs = () => {
     },
     {
       id: 4,
-      clubId: 1, // WebWizards
-      title: "Frontend Framework Seminar",
-      description: "Introduction to modern frontend frameworks including React, Vue, and Angular. Learn about component-based architecture and state management.",
-      date: "July 12, 2025",
-      time: "1:30 PM - 4:30 PM",
-      location: "Lecture Hall 2",
-      host: "Prof. Anand Verma",
+      clubId: 3, // WebWizards
+      title: "Concepts of Ideas and Innovation",
+      description: " Learn about Ideas and Innovations.",
+      date: "November 13, 2024",
+      time: "9:00 AM - 3:30 PM",
+      location: "Room B-603",
+      host: "Department of IT",
       imageSrc: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
       photos: [
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475"
+        "/iep1.jpeg",
       ]
     },
     {
@@ -280,19 +278,10 @@ const Clubs = () => {
                       <Users className={`h-5 w-5 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'} mt-0.5`} />
                       <div>
                         <p className="font-semibold">Club Details</p>
-                        <p>Faculty Coordinator: {club.coordinator}</p>
                         <p>Active Members: {club.members}</p>
                       </div>
                     </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <Calendar className={`h-5 w-5 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'} mt-0.5`} />
-                      <div>
-                        <p className="font-semibold">Meeting Schedule</p>
-                        <p>{club.meetingSchedule}</p>
-                      </div>
-                    </div>
-                    
+
                     <div className="flex items-start gap-3">
                       <Award className={`h-5 w-5 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'} mt-0.5`} />
                       <div>
@@ -300,6 +289,18 @@ const Clubs = () => {
                         <ul className="list-disc pl-5">
                           {club.activities.map((activity, index) => (
                             <li key={index}>{activity}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <Users className={`h-5 w-5 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'} mt-0.5`} />
+                      <div>
+                        <p className="font-semibold">Student Coordinators</p>
+                        <ul className="list-disc pl-5">
+                          {club.studentCoordinators?.map((coordinator, index) => (
+                            <li key={index}>{coordinator}</li>
                           ))}
                         </ul>
                       </div>
