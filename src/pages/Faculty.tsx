@@ -183,6 +183,36 @@ const Faculty = () => {
           ))}
         </div>
       </div>
+
+      <section className="supporting-staff">
+        <h2 className="text-2xl font-bold mb-4 text-center text-department-dark">Supporting Staff</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center">
+          <Card className="overflow-hidden shadow-md card-hover-effect w-56 mx-auto">
+            <CardContent className="p-0">
+              <div className="bg-gradient-to-r from-department-blue/5 to-department-blue/10 p-4 flex items-center gap-3">
+                <Avatar className="h-14 w-14 border-2 border-white shadow-md">
+                  <img src="/placeholder.svg" alt="Bala Mani" className="h-full w-full object-cover rounded-full" />
+                </Avatar>
+                <div>
+                  <h3 className="font-semibold text-base font-heading">Bala Mani</h3>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="overflow-hidden shadow-md card-hover-effect w-56 mx-auto">
+            <CardContent className="p-0">
+              <div className="bg-gradient-to-r from-department-blue/5 to-department-blue/10 p-4 flex items-center gap-3">
+                <Avatar className="h-14 w-14 border-2 border-white shadow-md">
+                  <img src="/ma.jpeg" alt="Mahalakshmi" className="h-full w-full object-cover rounded-full" />
+                </Avatar>
+                <div>
+                  <h3 className="font-semibold text-base font-heading">Mahalakshmi</h3>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
     </Layout>
   );
 };

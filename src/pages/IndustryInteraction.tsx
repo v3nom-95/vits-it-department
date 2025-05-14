@@ -198,7 +198,7 @@ const IndustryInteraction = () => {
       organization: "Microsoft",
       interactionType: "Bootcamp",
       date: "May 5, 2025",
-      certificate: "https://images.unsplash.com/photo-1503676382389-4809596d5290"
+      certificate: "/13ad.jpeg"
     },
     {
       id: 10,
