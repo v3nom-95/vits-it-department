@@ -11,10 +11,10 @@ const Achievements = () => {
       topic: "Foundation level in Programming and Data Science",
     },
     {
-      studentName: "Jane Smith",
-      rollNo: "654321",
-      issuedBy: "edX",
-      topic: "Data Science Professional Certificate",
+      studentName: "B. Pavan Babu",
+      rollNo: "22891A1207",
+      issuedBy: "Rao Associates",
+      topic: "Internship",
     },
   ];
 
