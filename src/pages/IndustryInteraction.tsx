@@ -153,7 +153,7 @@ const IndustryInteraction = () => {
       organization: "Rao Associatis",
       interactionType: "Internship",
       date: "February 24, 2025",
-      certificate: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+      certificate: "/pavanol.jpeg"
     },
     {
       id: 5,
@@ -162,7 +162,7 @@ const IndustryInteraction = () => {
       organization: "StartupIndia",
       interactionType: "Internship",
       date: "January - March, 2025",
-      certificate: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b"
+      certificate: "/smin.jpeg"
     },
     {
       id: 6,
@@ -180,7 +180,7 @@ const IndustryInteraction = () => {
       organization: "SatrtupIndia",
       interactionType: "Internship",
       date: "January - March, 2025",
-      certificate: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308"
+      certificate: "/rmin.jpeg"
     },
     {
       id: 8,
