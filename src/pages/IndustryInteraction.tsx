@@ -189,7 +189,7 @@ const IndustryInteraction = () => {
       organization: "Microsoft",
       interactionType: "Bootcamp",
       date: "May 5, 2025",
-      certificate: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca"
+      certificate: "abhiad.jpeg"
     },
     {
       id: 9,
@@ -207,7 +207,7 @@ const IndustryInteraction = () => {
       organization: "Microsoft",
       interactionType: "Bootcamp",
       date: "May 5, 2025",
-      certificate: "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6"
+      certificate: "31ad.jpeg"
     }
   ];
 
