@@ -9,6 +9,8 @@ import Faculty from "./pages/Faculty";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import IndustryInteraction from "./pages/IndustryInteraction";
+import Achievements from "./pages/Achievements";
+import Research from "./pages/Research";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/clubs" element={<Clubs />} />
             <Route path="/faculty" element={<Faculty />} />
+            <Route path="/achievements" element={<Achievements />} />
+            <Route path="/research" element={<Research />} />
             <Route path="/iii" element={<IndustryInteraction />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />

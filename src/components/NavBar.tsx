@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu } from 'lucide-react';
@@ -16,6 +15,8 @@ const NavBar = () => {
     { path: '/clubs', label: 'Clubs' },
     { path: '/faculty', label: 'Faculty' },
     { path: '/iii', label: 'III (Industry Institution Interaction)' },
+    { path: '/achievements', label: 'Achievements' },
+    { path: '/research', label: 'Research' },
     { path: '/contact', label: 'Contact' }
   ];
 
@@ -47,8 +48,6 @@ const NavBar = () => {
               </Link>
             ))}
           </div>
-          
-          {/* Student Portal button has been removed */}
         </div>
       </div>
     </nav>

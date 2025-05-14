@@ -27,7 +27,7 @@ const Faculty = () => {
       email: "meena.gupta@vits.ac.in",
       publications: 15,
       awards: "Excellence in Teaching 2021",
-      image: "/faculty2.png"
+      image: "/pp.jpeg"
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ const Faculty = () => {
       email: "rajesh.kumar@vits.ac.in",
       publications: 12,
       awards: "Young Scientist Award 2020",
-      image: "/faculty3.png"
+      image: "/nk.jpeg"
     },
     {
       id: 4,
@@ -63,7 +63,7 @@ const Faculty = () => {
       email: "priya.singh@vits.ac.in",
       publications: 18,
       awards: "Women in Tech Award 2022",
-      image: "/faculty5.png"
+      image: "/ta.jpeg"
     },
     {
       id: 6,
@@ -87,7 +87,7 @@ const Faculty = () => {
       email: "anjali.mehta@vits.ac.in",
       publications: 20,
       awards: "AI Research Excellence Award 2023",
-      image: "/faculty7.png"
+      image: "/asr.jpg"
     },
     {
       id: 8,
@@ -99,7 +99,7 @@ const Faculty = () => {
       email: "rajiv.menon@vits.ac.in",
       publications: 14,
       awards: "Data Science Innovator Award 2022",
-      image: "/faculty8.png"
+      image: "/msb.jpeg"
     },
     {
       id: 9,
@@ -111,7 +111,7 @@ const Faculty = () => {
       email: "kavita.sharma@vits.ac.in",
       publications: 5,
       awards: "Best Educator Award 2021",
-      image: "/faculty9.png"
+      image: "/gr.jpeg"
     },
     {
       id: 10,

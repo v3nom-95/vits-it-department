@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/Layout';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
 
 const Index = () => {
+  const [isGoalDialogOpen, setIsGoalDialogOpen] = useState(false);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -53,14 +56,104 @@ const Index = () => {
               with highly qualified and experienced faculty who are dedicated to ensuring academic 
               excellence and professional growth of students.
             </p>
-            <Button variant="outline" className="flex items-center gap-2 group transform-gpu will-change-auto">
-              Learn More 
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <Button
+              className="bg-department-purple text-white hover:bg-department-purple-dark"
+              onClick={() => setIsGoalDialogOpen(true)}
+            >
+              Goal
             </Button>
+            <Tabs>
+              <TabsList className="flex justify-center space-x-4">
+                <TabsTrigger value="vision" className="px-4 py-2 text-lg font-semibold text-department-purple border-b-2 border-transparent hover:border-department-purple">Vision</TabsTrigger>
+                <TabsTrigger value="mission" className="px-4 py-2 text-lg font-semibold text-department-blue border-b-2 border-transparent hover:border-department-blue">Mission</TabsTrigger>
+                <TabsTrigger value="pso" className="px-4 py-2 text-lg font-semibold text-department-green border-b-2 border-transparent hover:border-department-green">Program Specific Outcomes</TabsTrigger>
+              </TabsList>
+              <TabsContent value="vision" className="mt-6">
+                <p className="text-gray-700 text-lg">
+                  To emerge as a premier center for education and research in computer science and engineeringand in transforming students into innovative professionals of contemporary and future technologies to cater the global needs of human resources for IT and ITES companies .
+
+
+                </p>
+              </TabsContent>
+              <TabsContent value="mission" className="mt-6">
+                <p className="text-gray-700 text-lg">
+                  <li>
+                  To produce excellent computer science professionals by imparting quality training, hands-on-experience and value based education.</li>
+
+<li>To strengthen links with industry through collaborative partnerships in research & product development and student internships.</li>
+
+<li>To promote research based projects and activities among the students in the emerging areas of technology.</li>
+
+<li>To explore opportunities for skill development in the application of computer science among rural and under privileged population .</li>
+                </p>
+              </TabsContent>
+              <TabsContent value="pso" className="mt-6">
+                <p className="text-gray-700 text-lg">
+                  <li>Professional Skills: Learn the basic concepts of Computer Science and Engineering and to apply them to various areas, like Data Structures, Operating Systems, Computer Organization, Computer Networks, Information Security etc., in the design and implementation of complex systems.</li>
+
+<li>Problem-Solving Skills : Solutions to complex Computer Science and Engineering problems, using latest hardware and software tools, along with analytical skills to arrive at cost effective and appropriate solutions.</li>
+
+<li>Entrepreneurship skills and career management : Social-awareness & environmental-wisdom along with ethical responsibility to lead a successful career and to sustain passion and zeal for real-world applications using optimal resources as an Entrepreneur.</li>
+
+
+                </p>
+              </TabsContent>
+            </Tabs>
           </div>
         </section>
-        
-        {/* Quick Stats Section */}
+      </div>
+
+      {/* Goal Dialog */}
+      <Dialog open={isGoalDialogOpen} onOpenChange={setIsGoalDialogOpen}>
+        <DialogContent className="max-w-3xl">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-department-purple">Department Goal</DialogTitle>
+            <DialogDescription className="text-gray-700 mt-4">
+
+<li>Regularly update the curriculum to reflect emerging technologies such as AI, IoT, cybersecurity, and cloud computing.</li>
+
+<li>Foster Research and Innovation in IT</li>
+
+<li>Promote interdisciplinary research, innovation labs, and publication in reputed journals and conferences.</li>
+
+<li>Enhance Student Employability and Skill Development</li>
+
+<li>Provide certifications, internships, and training programs in collaboration with industry partners.</li>
+
+<li>Strengthen Industry-Academia Collaboration</li>
+
+<li>Build partnerships with tech companies for internships, guest lectures, real-world projects, and curriculum inputs.</li>
+
+<li>Ensure Quality Teaching and Continuous Learning</li>
+
+<li>Adopt modern pedagogical tools such as flipped classrooms, online labs, and collaborative platforms.</li>
+
+<li>Encourage Entrepreneurship and Start-up Culture</li>
+
+<li>Support incubation centers, hackathons, and innovation challenges for students and faculty.</li>
+
+<li>Improve Infrastructure and Technological Resources</li>
+
+<li>Continuously upgrade labs, servers, and software tools to align with current industry standards.</li>
+
+<li>Promote Ethical and Responsible Use of Technology</li>
+
+<li>Emphasize cybersecurity, digital ethics, and data privacy in teaching and practice.</li>
+
+<li>Achieve National and International Accreditations</li>
+
+<li>Align programs with NBA/ABET accreditation standards to ensure quality and global recognition.</li>
+
+<li>Encourage Global Exposure and Collaboration</li>
+
+<li>Facilitate student and faculty exchange programs, MOUs with international institutions, and joint research.</li>
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+
+      <div className="container mx-auto px-4 py-16 transform-gpu will-change-auto">
+        {/* Stats Section */}
         <section className="mt-16 py-12 bg-gradient-to-r from-department-purple/5 to-department-blue/5 rounded-xl transform-gpu will-change-auto">
           <div className="container mx-auto px-4 transform-gpu will-change-auto">
             <h2 className="section-header-center mb-12 transform-gpu will-change-auto">Department Highlights</h2>
