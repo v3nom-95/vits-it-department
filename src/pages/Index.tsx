@@ -159,19 +159,19 @@ const Index = () => {
             <h2 className="section-header-center mb-12 transform-gpu will-change-auto">Department Highlights</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 transform-gpu will-change-auto">
               <div className="text-center p-6 bg-white rounded-lg shadow-md card-hover-effect transform-gpu will-change-auto">
-                <div className="text-4xl font-bold text-department-purple mb-2 transform-gpu will-change-auto">98%</div>
+                <div className="text-4xl font-bold text-department-purple mb-2 transform-gpu will-change-auto">94%</div>
                 <div className="text-gray-700 transform-gpu will-change-auto">Placement Rate</div>
               </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-md card-hover-effect transform-gpu will-change-auto">
                 <div className="text-4xl font-bold text-department-blue mb-2 transform-gpu will-change-auto">15+</div>
-                <div className="text-gray-700 transform-gpu will-change-auto">Research Projects</div>
+                <div className="text-gray-700 transform-gpu will-change-auto">Research Works</div>
               </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-md card-hover-effect transform-gpu will-change-auto">
                 <div className="text-4xl font-bold text-department-purple mb-2 transform-gpu will-change-auto">20+</div>
                 <div className="text-gray-700 transform-gpu will-change-auto">Industry Partners</div>
               </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-md card-hover-effect transform-gpu will-change-auto">
-                <div className="text-4xl font-bold text-department-blue mb-2 transform-gpu will-change-auto">4</div>
+                <div className="text-4xl font-bold text-department-blue mb-2 transform-gpu will-change-auto">5</div>
                 <div className="text-gray-700 transform-gpu will-change-auto">Active Student Clubs</div>
               </div>
             </div>
