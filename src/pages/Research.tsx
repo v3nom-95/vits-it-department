@@ -62,7 +62,7 @@ const Research = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4 text-center text-department-dark">Research Works</h1>
           <p className="text-gray-700 max-w-3xl mx-auto text-center mb-0">
-            Explore the groundbreaking research conducted by our faculty and students in various fields of study.
+            In an era defined by rapid technological advancement, research and innovation have become integral to academic excellence and societal progress. At our department, we have established dedicated research groups focusing on cutting-edge domains. These groups are designed to foster a culture of inquiry, collaboration, and applied research among faculty and students. By working on real-world problems and interdisciplinary projects, our research groups aim to contribute impactful solutions and advance the frontiers of knowledge in their respective areas.
           </p>
         </div>
       </section>
