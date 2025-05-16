@@ -35,6 +35,7 @@ const Clubs = () => {
   const [selectedClub, setSelectedClub] = useState<Club | null>(null);
   const [selectedEvent, setSelectedEvent] = useState<ClubEvent | null>(null);
   const [showEventDetails, setShowEventDetails] = useState(false);
+  const [showClubDetails, setShowClubDetails] = useState(false);
 
   const clubs: Club[] = [
     {
@@ -189,7 +190,7 @@ const Clubs = () => {
       title: "SilverJubilee Sports Meet",
       description: "A grand event featuring multiple sports competitions including football and cricket.",
       date: "Feb, 2025",
-      time: "9:00 AM - 5:00 PM",
+      time: "9:00 AM - 5:30 PM",
       location: "Cricket Ground",
       host: "Sports Club in collaboration with the Department of IT",
       imageSrc: "sp2.jpg",
@@ -214,10 +215,6 @@ const Clubs = () => {
       ]
     }
   ];
-
-  const handleClubClick = (club: Club) => {
-    setSelectedClub(selectedClub?.id === club.id ? null : club);
-  };
 
   const handleEventClick = (event: ClubEvent) => {
     setSelectedEvent(event);
@@ -252,7 +249,7 @@ const Clubs = () => {
               <Card 
                 key={club.id} 
                 className={`overflow-hidden shadow-lg border-t-4 ${club.color === 'purple' ? 'border-department-purple' : 'border-department-blue'} card-hover-effect cursor-pointer`}
-                onClick={() => handleClubClick(club)}
+                onClick={() => { setSelectedClub(club); setShowClubDetails(true); }}
               >
                 <CardHeader className={`bg-gradient-to-r ${club.color === 'purple' ? 'from-department-purple/5 to-department-purple/10' : 'from-department-blue/5 to-department-blue/10'}`}>
                   <div className="flex justify-between items-start">
@@ -301,37 +298,45 @@ const Clubs = () => {
                   </div>
                 </CardContent>
               </Card>
-
-              {selectedClub?.id === club.id && (
-                <div className="mt-6 mb-10">
-                  <h3 className={`text-xl font-bold mb-4 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'}`}>
-                    {club.name} 
-                  </h3>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {getClubEvents(club.id).map(event => (
-                      <EventCard
-                        key={event.id}
-                        id={event.id}
-                        title={event.title}
-                        description={event.description}
-                        date={event.date}
-                        time={event.time}
-                        location={event.location}
-                        imageSrc={event.imageSrc}
-                        host={event.host}
-                        onClick={() => handleEventClick(event)}
-                      />
-                    ))}
-                  </div>
-                  {getClubEvents(club.id).length === 0 && club.id !== 1 && (
-                    <p className="text-gray-500 italic">No upcoming events for this club.</p>
-                  )}
-                </div>
-              )}
             </div>
           ))}
         </div>
       </div>
+
+      {/* Club Details Overlay Dialog */}
+      <Dialog open={showClubDetails} onOpenChange={setShowClubDetails}>
+        <DialogContent className="max-w-4xl sm:max-w-[800px]">
+          <DialogHeader>
+            <DialogTitle className="text-2xl">{selectedClub?.name} Events</DialogTitle>
+          </DialogHeader>
+          {selectedClub && (
+            <div>
+              <div className="mb-4">
+                <span className="font-semibold">Events:</span>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-2">
+                  {getClubEvents(selectedClub.id).map(event => (
+                    <EventCard
+                      key={event.id}
+                      id={event.id}
+                      title={event.title}
+                      description={event.description}
+                      date={event.date}
+                      time={event.time}
+                      location={event.location}
+                      imageSrc={event.imageSrc}
+                      host={event.host}
+                      onClick={() => handleEventClick(event)}
+                    />
+                  ))}
+                  {getClubEvents(selectedClub.id).length === 0 && (
+                    <p className="text-gray-500 italic">No upcoming events for this club.</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* Event Details Dialog */}
       <Dialog open={showEventDetails} onOpenChange={setShowEventDetails}>
