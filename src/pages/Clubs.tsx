@@ -100,15 +100,14 @@ const Clubs = () => {
       clubId: 1, // CodeCraft
       title: "Competitive Programming Contest",
       description: "A 4-hour coding competition that will test your algorithm design, problem-solving skills, and efficiency. Prizes for top performers!",
-      date: "June 15, 2025",
-      time: "2:00 PM - 6:00 PM",
-      location: "Computer Lab A",
-      host: "Prof. Ravi Kumar",
+      date: "May 3, 2025",
+      time: "2:00 PM - 3:30 PM",
+      location: "B-603",
+      host: "Dept. of IT",
       imageSrc: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
       photos: [
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+        "/cce1.jpeg",
+        
       ]
     },
     {
@@ -158,13 +157,13 @@ const Clubs = () => {
     },
     {
       id: 5,
-      clubId: 1, // AI Innovators
-      title: "Machine Learning Hackathon",
-      description: "Apply your ML skills to solve real-world problems in this day-long hackathon. Datasets provided, bring your laptop and creativity!",
-      date: "June 29, 2025",
-      time: "9:00 AM - 6:00 PM",
-      location: "Innovation Center",
-      host: "Dr. Sneha Patel",
+      clubId: 2, // AI Innovators
+      title: "Social Consciousness Seminar",
+      description: "A seminar on the importance of social awareness and responsibility.",
+      date: "December 12, 2024",
+      time: "3:30 AM - 5:30 PM",
+      location: "604-A",
+      host: "Department of IT",
       imageSrc: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
       photos: [
         "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
