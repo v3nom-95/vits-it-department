@@ -12,44 +12,50 @@ const Research = () => {
     "Mrs. T. Aruna",
     "Mr. G. Chanakya",
     "Mr. J. Srikanth",
+    "Mr. A. Sankar Reddy",
     "Mr. M.S.B Kasyapa",
     "Mr. G. Rama Krishna",
     "Mrs. CH. Sai Vijaya",
   ];
 
   const researchWorks = [
-    { fieldOfStudy: "AI & Machine Learning", topic: "Next-Gen in-Vehicle Interaction", faculty: "Mrs. T. Aruna" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "EFFICIENT SUPERVISED MACHINE LEARNING", faculty: "Dr. M. Prabhakar" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Web Spoofing Prevention", faculty: "Mr. G. Chanakya" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Eduflex Card", faculty: "Mr. G. Chanakya" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Hypokinetic Rigid Syndrome", faculty: "Dr. M. Prabhakar" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Multi-Face Recognition", faculty: "Mr. J. Srikanth" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Smart Voting System", faculty: "Mr. J. Srikanth" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Advanced Technology Interviews", faculty: "Mr. Sk. Khaleelullah" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "DietRx", faculty: "Mr. Sk. Khaleelullah" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Federated Learning for Anomaly Detection", faculty: "Dr. M. Prabhakar" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Computer Vision Proctoring", faculty: "Mr. Sk. Khaleelullah" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Malicious Activities Detection", faculty: "Mr. G. Chanakya" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Malicious URL Detection", faculty: "Mr. G. Chanakya" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Mitotic Nuclei Classification", faculty: "Mrs. T. Aruna" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "TRAFFIC ROUTE PREDICTION", faculty: "Dr. M. Prabhakar" },
-    { fieldOfStudy: "Blockchain", topic: "Blockchain for Food Supply", faculty: "Dr. B. Naveen Kumar" },
-    { fieldOfStudy: "Deep Learning", topic: "Deep Fake Detection", faculty: "Prof. B.V. Chowdary" },
-    { fieldOfStudy: "Deep Learning", topic: "Interview Brilliance", faculty: "Dr. B. Naveen Kumar" },
-    { fieldOfStudy: "Deep Learning", topic: "Digital Counterfeit Detection", faculty: "Prof. B.V. Chowdary" },
-    { fieldOfStudy: "Deep Learning", topic: "Traffic Sign Assistant", faculty: "Dr. M. Prabhakar" },
-    { fieldOfStudy: "Internet of Things", topic: "IOT Networks", faculty: "Prof. B.V. Chowdary" },
-    { fieldOfStudy: "Blockchain", topic: "Blockchain Beyond Finance", faculty: "Mr. M.S.B Kasyapa" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "IPL Score Prediction", faculty: "Dr. B. Naveen Kumar" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Multi Crop Detection", faculty: "Mr. M.S.B.Kasyapa" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Grain Quality Testing", faculty: "Mr. M.S.B.Kasyapa" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Real-Time Sentiment Analysis", faculty: "Mrs. T. Aruna" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Next-Gen in-Vehicle Interaction: Wibots Wireless Network Edge Based Gesture Recognition By Using Machine Learning", faculty: "Mrs. T. Aruna" },
+    { fieldOfStudy: "Deep Learning", topic: "Deep Fake Detection using Adversarial Ensemble Techniques", faculty: "Prof. B.V. Chowdary" },
+    { fieldOfStudy: "Cyber Security", topic: "EFFICIENT SUPERVISED MACHINE LEARNING FOR CYBERSECURITY APPLICATIONS USING ADAPTIVE FEATURE SELECTION AND EXPLAINABLE AI SCENARIOS", faculty: "Dr. M. Prabhakar" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Web Spoofing Prevention: Machine Learning based Client-Side Defence", faculty: "Mr. G. Chanakya" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Eduflex Card–A Digital Card for Student Account", faculty: "Mr. G. Chanakya" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Hypokinetic Rigid Syndrome: Early Prediction of Parkinson’s Disease using Ensemble classifiers", faculty: "Dr. M. Prabhakar" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Artificial Intelligence based Multi-Face Recognition and Attendance Marking System", faculty: "Mr. J. Srikanth" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Smart Voting System Utilizing Iris Recognition Technology", faculty: "Mr. J. Srikanth" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Analysis of Advanced Technology Integrated Interviews", faculty: "Mr. Sk. Khaleelullah" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "DietRx: Machine Learning Enhanced Disease Specific Nutrition and Precautions", faculty: "Mr. Sk. Khaleelullah" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Federated Learning-Driven Decentralized Intelligence for Explainable Anomaly Detection in Industrial Operations", faculty: "Dr. M. Prabhakar" },
+    { fieldOfStudy: "Cyber Security", topic: "Machine Learning for Web Security: Strategies to Detect and Prevent Malicious Activities", faculty: "Mr. G. Chanakya" },
+    { fieldOfStudy: "Cyber Security", topic: "Revealing Cyber Risks: Innovating Malicious URL Detection with Diverse Machine Learning Strategies", faculty: "Mr. G. Chanakya" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Automated Mitotic Nuclei Classification Using Fruitfly Optimization Algorithm with Machine Learning on Breast Cancer Diagnosis", faculty: "Mrs. T. Aruna" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Traffic Route Prediction", faculty: "Dr. M. Prabhakar" },
+    { fieldOfStudy: "Blockchain", topic: "Blockchain Anchored Federated Learning and Tokenized Traceability for Sustainable Food Supply Chains", faculty: "Dr. B. Naveen Kumar" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Interview Brilliance: Harnessing AI for Confidence-Driven Evaluation", faculty: "Dr. M. Prabhakar" },
+    { fieldOfStudy: "Deep Learning", topic: "Analyzing and Detecting Digital Counterfeit Images using DenseNet, ResNet and CNN", faculty: "Mrs. T. Aruna" },
+    { fieldOfStudy: "Deep Learning", topic: "Enhancing Urban Mobility: Deep Learning-Based Traffic Sign Assistant for the Visually Impaired", faculty: "Dr. M. Prabhakar" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "BUILDING ROBUST IOT NETWORKS WITH DYNAMIC LAYER PRIORITIZATION AND PREDICTIVE FAULT MANAGEMENT PROCESS", faculty: "Prof. B.V. Chowdary" },
+    { fieldOfStudy: "Blockchain", topic: "The Role of Blockchain in Transforming Industries Beyond Finance", faculty: "Mr. M.S.B Kasyapa" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "IPL SCORE PREDICTION USING RANDOM FOREST", faculty: "Dr. B. Naveen Kumar" },
+    { fieldOfStudy: "Deep Learning", topic: "Multi Crop Disease Detection", faculty: "Mr. M.S.B.Kasyapa" },
+    { fieldOfStudy: "Deep Learning", topic: "Automated Grain Quality Testing Using CNN, Densenet, Mobile Net", faculty: "Mr. M.S.B.Kasyapa" },
+    { fieldOfStudy: "Natural Language Processing", topic: "Real-Time Sentiment Analysis of Comments and Reviews: A Kafka Driven Approach", faculty: "Mrs. T. Aruna" },
     { fieldOfStudy: "AI & Machine Learning", topic: "Professional Pathway Hub", faculty: "Mr. J. Srikanth" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Cardiovascular Prediction", faculty: "Dr. B. Naveen Kumar" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Document Clustering", faculty: "Dr. M. Prabhakar" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Real Estate System", faculty: "Mrs. T. Aruna" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Missing Child Detection", faculty: "Prof. B.V. Chowdary" },
-    { fieldOfStudy: "AI & Machine Learning", topic: "Facial Gesture Cursor", faculty: "Mr. Sk. Khaleelullah" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Harnessing Machine Learning Ensembles For Next-Gen Cardiovascular Risk Prediction", faculty: "Dr. B. Naveen Kumar" },
+    { fieldOfStudy: "Natural Language Processing", topic: "From Chaos To Clarity- A New Era In Document Clustering And Classification", faculty: "Dr. M. Prabhakar" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Improving Online Real Estate Management System Using Data Analytics", faculty: "Mrs. T. Aruna" },
+    { fieldOfStudy: "Deep Learning", topic: "Identification of Missing Child and Recovery System Using Multi Class SVM and Deep Learning", faculty: "Prof. B.V. Chowdary" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Multi Facial Gesture Based Cursor Control System ", faculty: "Mr. Sk. Khaleelullah" },
+    { fieldOfStudy: "Deep Learning", topic: "An Automated Leaf & Fruit Disease Prediction using Transfer Learning and Recommendations", faculty: "Mr. G. Chanakya" },
+    { fieldOfStudy: "Blockchain", topic: "Funds-Chain: Unlocking the True Potential of Crowdfunding Using Blockchain", faculty: "Prof. B.V. Chowdary" },
+    { fieldOfStudy: "Deep Learning", topic: "A Computing Framework for Transfer Learning and Ensemble Classification of Surface Patterns", faculty: "Mr. A. Sankar Reddy" },
+    { fieldOfStudy: "Deep Learning", topic: "MRI-Scan Based Brain Tumor Detection", faculty: "Mr. A. Sankar Reddy" },
+    { fieldOfStudy: "Natural Language Processing", topic: "Dynamic Multilingual Voice Transcription Using NLP", faculty: "Mr. Sk. Khaleelullah" },
+    { fieldOfStudy: "AI & Machine Learning", topic: "Churn Sentry Model Approach: Leveraging Random Forest for Customer Retention using flask", faculty: "Mr. G. Ramakrishna" },
   ];
 
   // Grouping logic
@@ -66,7 +72,7 @@ const Research = () => {
     return acc;
   }, {});
 
-  // Sort faculty in each field based on designation priority
+
   // Sort faculty in each field based on explicit facultyOrder
   Object.entries(groupedResearch).forEach(([field, data]) => {
     data.faculty.sort((a, b) => {
@@ -109,6 +115,9 @@ const Research = () => {
                               <li key={idx}>{name}</li>
                           ))}
                         </ul>
+                        <p className="mt-2 font-semibold text-department-purple">
+                          Total Research Papers: {groupedResearch[field].topics.length}
+                        </p>
                       </CardContent>
                     </Card>
                 ))}
@@ -119,14 +128,25 @@ const Research = () => {
                     className="mb-6 bg-department-purple text-white px-4 py-2 rounded"
                     onClick={() => setSelectedField(null)}
                 >
-                  Back to Fields
+                  Back to Research Groups
                 </button>
-                <h2 className="text-3xl font-bold mb-4 text-department-dark">{selectedField}</h2>
-                <ul className="list-disc list-inside text-gray-800">
+                <h2 className="text-3xl font-bold mb-4 text-department-dark">Contribution in {selectedField}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                   {groupedResearch[selectedField].topics.map((topic, idx) => (
-                      <li key={idx}>{topic}</li>
+                      <Card
+                          key={idx}
+                          className="shadow-md border-t-4 border-department-purple hover:shadow-lg transition-shadow duration-300"
+                      >
+                        <CardHeader className="bg-gradient-to-r from-department-purple/5 to-department-purple/10">
+                          <CardTitle className="text-department-purple text-lg font-semibold">
+                            {topic}
+                          </CardTitle>
+                        </CardHeader>
+                      </Card>
                   ))}
-                </ul>
+                </div>
+
+
               </div>
           )}
         </div>
