@@ -190,13 +190,12 @@ const Clubs = () => {
       description: "A grand event featuring multiple sports competitions including football, cricket, and athletics.",
       date: "August 20, 2025",
       time: "9:00 AM - 5:00 PM",
-      location: "Main Sports Ground",
+      location: "Cricket Ground",
       host: "Sports Committee",
-      imageSrc: "https://images.unsplash.com/photo-1505843279827-4b1d06b7a6c6",
+      imageSrc: "sp2.jpeg",
       photos: [
-        "https://images.unsplash.com/photo-1505843279827-4b1d06b7a6c6",
-        "https://images.unsplash.com/photo-1517649763962-0c623066013b",
-        "https://images.unsplash.com/photo-1464983953574-0892a716854b"
+        "sp2.jpeg",
+        
       ]
     },
     {
@@ -204,8 +203,8 @@ const Clubs = () => {
       clubId: 5, // Sports club
       title: "Intra-Department Cricket Tournament",
       description: "Department compete in a knockout cricket tournament. Open to all students!",
-      date: "September 10, 2025",
-      time: "2:00 PM - 6:00 PM",
+      date: "July 4, 2024",
+      time: "3:30 PM - 5:30 PM",
       location: "Cricket Ground",
       host: "Sports club",
       imageSrc: "/sp1.jpeg",
