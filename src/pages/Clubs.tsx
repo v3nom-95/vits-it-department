@@ -45,7 +45,7 @@ const Clubs = () => {
       meetingSchedule: "Every Saturday, 2:00 PM - 3:30 PM",
       activities: ["Weekly coding challenges", "Hackathons", "Guest lectures from industry experts"],
       color: "purple",
-      members: 45,
+      members: 136,
       established: "2022"
     },
     {
@@ -56,7 +56,7 @@ const Clubs = () => {
       meetingSchedule: "Every Tuesday, 3:30 PM - 5:30 PM",
       activities: ["Seminars", "Presentations", "JAM sessions"],
       color: "blue",
-      members: 32,
+      members: 136,
       established: "2022"
     },
     {
@@ -67,7 +67,7 @@ const Clubs = () => {
       meetingSchedule: "Every Wednesday, 2:00 PM - 3:30 PM",
       activities: ["IEP sessions", "Industry 4.0 sessions", "E-Summits"],
       color: "purple",
-      members: 38,
+      members: 136,
       established: "2024"
     },
     {
@@ -78,7 +78,7 @@ const Clubs = () => {
       meetingSchedule: "Every Thursday, 3:30 PM - 5:00 PM",
       activities: ["Poster making", "Drawing competitions", "Quizzes"],
       color: "blue",
-      members: 40,
+      members: 136,
       established: "2022"
     },
     {
@@ -89,7 +89,7 @@ const Clubs = () => {
       meetingSchedule: "Every Friday, 4:00 PM - 5:30 PM",
       activities: ["Football matches", "Cricket tournaments", "Athletics training"],
       color: "purple",
-      members: 30,
+      members: 136,
       established: "2022"
     }
   ];
