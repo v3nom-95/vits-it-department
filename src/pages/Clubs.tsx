@@ -99,7 +99,7 @@ const Clubs = () => {
       id: 1,
       clubId: 1, // CodeCraft
       title: "Competitive Programming Contest",
-      description: "A 4-hour coding competition that will test your algorithm design, problem-solving skills, and efficiency. Prizes for top performers!",
+      description: "A 1.5 hour coding competition that will test your algorithm design, problem-solving skills, and efficiency. Prizes for top performers!",
       date: "May 3, 2025",
       time: "2:00 PM - 3:30 PM",
       location: "B-603",
@@ -116,14 +116,13 @@ const Clubs = () => {
       title: "Algorithm Deep Dive Workshop",
       description: "Learn advanced algorithmic techniques including dynamic programming, graph algorithms, and optimization strategies.",
       date: "July 5, 2025",
-      time: "3:00 PM - 5:00 PM",
-      location: "Lecture Hall 3",
-      host: "Dr. Ankit Verma",
+      time: "2:00 PM - 3:30 PM",
+      location: "B-603",
+      host: "Dept. of IT",
       imageSrc: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       photos: [
-        "https://images.unsplash.com/photo-1518770660439-4636190af475",
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-        "https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+        "cce2.jpeg",
+        
       ]
     },
     {
