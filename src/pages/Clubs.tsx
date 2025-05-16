@@ -163,7 +163,7 @@ const Clubs = () => {
       time: "3:30 AM - 5:30 PM",
       location: "604-A",
       host: "Department of IT",
-      imageSrc: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+      imageSrc: "spe1.jpeg",
       photos: [
         "/spe1.jpeg",
         
@@ -178,7 +178,7 @@ const Clubs = () => {
       time: "2:00 PM - 3:30 PM",
       location: "604-A",
       host: "Department of IT",
-      imageSrc: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      imageSrc: "art1.jpeg",
       photos: [
         "/art1.jpeg",
       ]
