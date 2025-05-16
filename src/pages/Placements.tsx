@@ -24,7 +24,7 @@ const placementData = [
   {
     year: '2024-2025',
     studentsPlaced: 16,
-    offers: 23,
+    offers: 24,
     numberOfStudentsEligible: 58, // Renamed field
     topCompanies: ['Rinex', 'GlobalLogic', 'Infosys', 'Cognizant'],
     highlight: 'Highest package 10 LPA offered. Ongoing placements',
