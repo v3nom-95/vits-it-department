@@ -41,7 +41,7 @@ const Clubs = () => {
       id: 1,
       name: "InfyCoder",
       description: "A programming club focused on competitive coding, algorithm development, and problem-solving.",
-      studentCoordinators: ["A K V S CHAKRAVARTHY", "PITTALA SHRENIK KUMAR", "BAKUNA AMULYA,", "R KHYATHI PRADHA", ""],
+      studentCoordinators: ["A K V S CHAKRAVARTHY", "PITTALA SHRENIK KUMAR", "BAKUNA AMULYA,", "R KHYATHI PRADHA", "SHAIK FARHA BEGUM","KANTETI JAYA CHANDRA"],
       meetingSchedule: "Every Saturday, 2:00 PM - 3:30 PM",
       activities: ["Weekly coding challenges", "Hackathons", "Guest lectures from industry experts"],
       color: "purple",
