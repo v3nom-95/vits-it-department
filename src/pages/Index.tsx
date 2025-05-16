@@ -16,13 +16,27 @@ const Index = () => {
             <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12 animate-fade-in transform-gpu will-change-auto">
               <div className="flex items-center mb-6">
                 <img src="/vait-logo.png" alt="VAIT Department Logo" className="h-16 w-16 mr-4 rounded-full shadow-md" />
-                <h1 className="text-4xl md:text-5xl font-bold text-department-dark leading-tight transform-gpu will-change-auto">
+                <h1 className="text-4xl md:text-4xl font-bold text-department-dark leading-tight transform-gpu will-change-auto">
                   Department of <span className="text-department-purple transform-gpu will-change-auto">Information Technology</span>
                 </h1>
               </div>
               <p className="text-gray-700 text-lg mb-8 transform-gpu will-change-auto">
                 Shaping the future through innovation, quality education, and technological excellence. Join us in our journey to create tomorrow's IT leaders.
               </p>
+              <div className="mt-4">
+                <h2 className="text-lg font-bold text-department-purple px-4 rounded mb-3">Communication Channels:</h2>
+                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                  <li>Department Website</li>
+                  <li>Annual Reports &amp; Strategic Plans</li>
+                  <li>Newsletters &amp; Email Bulletins</li>
+                  <li>Stakeholder Meetings (Industry, Alumni, and BOS members)</li>
+                  <li>Orientation Programs</li>
+                  <li>Social Media &amp; Digital Platforms</li>
+                  <li>Departmental Events &amp; Seminars</li>
+                  <li>Posters &amp; Displays</li>
+                </ul>
+              </div>
+
             </div>
             <div className="md:w-1/2 animate-fade-in transform-gpu will-change-auto" style={{ animationDelay: '0.2s' }}>
               <img 
@@ -60,43 +74,64 @@ const Index = () => {
               className="bg-department-purple text-white hover:bg-department-purple-dark"
               onClick={() => setIsGoalDialogOpen(true)}
             >
-              Goal
+              Department Goals
             </Button>
-            <Tabs>
+            <Tabs defaultValue="vision-mission">
               <TabsList className="flex justify-center space-x-4">
-                <TabsTrigger value="vision" className="px-4 py-2 text-lg font-semibold text-department-purple border-b-2 border-transparent hover:border-department-purple">Vision</TabsTrigger>
-                <TabsTrigger value="mission" className="px-4 py-2 text-lg font-semibold text-department-blue border-b-2 border-transparent hover:border-department-blue">Mission</TabsTrigger>
-                <TabsTrigger value="pso" className="px-4 py-2 text-lg font-semibold text-department-green border-b-2 border-transparent hover:border-department-green">Program Specific Outcomes</TabsTrigger>
+                <TabsTrigger value="vision-mission" className="px-4 py-2 text-lg font-semibold text-department-purple border-b-2 border-transparent hover:border-department-purple">Vision & Mission</TabsTrigger>
+
+                <TabsTrigger value="pso" className="px-4 py-2 text-lg font-semibold text-department-blue text-department-green border-b-2 border-transparent hover:border-department-green">Program Specific Outcomes</TabsTrigger>
               </TabsList>
-              <TabsContent value="vision" className="mt-6">
-                <p className="text-gray-700 text-lg">
-                  To emerge as a premier center for education and research in computer science and engineeringand in transforming students into innovative professionals of contemporary and future technologies to cater the global needs of human resources for IT and ITES companies .
+              <TabsContent value="vision-mission" className="mt-6 space-y-6">
+                <div>
+                  <h2 className="text-2xl font-semibold text-blue-700 mb-2">Vision</h2>
+                  <p className="text-gray-700 text-lg">
+                    To emerge as a premier center for education and research in computer science and engineering and in transforming students into innovative professionals of contemporary and future technologies to cater the global needs of human resources for IT and ITES companies.
+                  </p>
+                </div>
 
-
-                </p>
-              </TabsContent>
-              <TabsContent value="mission" className="mt-6">
-                <p className="text-gray-700 text-lg">
-                  <li>
-                  To produce excellent computer science professionals by imparting quality training, hands-on-experience and value based education.</li>
-
-<li>To strengthen links with industry through collaborative partnerships in research & product development and student internships.</li>
-
-<li>To promote research based projects and activities among the students in the emerging areas of technology.</li>
-
-<li>To explore opportunities for skill development in the application of computer science among rural and under privileged population .</li>
-                </p>
+                <div>
+                  <h2 className="text-2xl font-semibold text-blue-700 mb-2">Mission</h2>
+                  <ul className="list-disc pl-6 text-gray-700 text-lg space-y-2">
+                    <li>
+                      To produce excellent computer science professionals by imparting quality training, hands-on experience, and value-based education.
+                    </li>
+                    <li>
+                      To strengthen links with industry through collaborative partnerships in research & product development and student internships.
+                    </li>
+                    <li>
+                      To promote research-based projects and activities among the students in the emerging areas of technology.
+                    </li>
+                    <li>
+                      To explore opportunities for skill development in the application of computer science among rural and underprivileged populations.
+                    </li>
+                  </ul>
+                </div>
               </TabsContent>
               <TabsContent value="pso" className="mt-6">
-                <p className="text-gray-700 text-lg">
-                  <li>Professional Skills: Learn the basic concepts of Computer Science and Engineering and to apply them to various areas, like Data Structures, Operating Systems, Computer Organization, Computer Networks, Information Security etc., in the design and implementation of complex systems.</li>
+                <dl className="text-lg space-y-6">
+                  <div>
+                    <dt className="font-bold text-indigo-600">PSO1: Professional Skills</dt>
+                    <dd className="text-gray-700">
+                      Learn the basic concepts of Computer Science and Engineering and apply them to areas like Data Structures, Operating Systems, Computer Organization, Computer Networks, and Information Security in the design and implementation of complex systems.
+                    </dd>
+                  </div>
 
-<li>Problem-Solving Skills : Solutions to complex Computer Science and Engineering problems, using latest hardware and software tools, along with analytical skills to arrive at cost effective and appropriate solutions.</li>
+                  <div>
+                    <dt className="font-bold text-indigo-600">PSO2: Problem-Solving Skills</dt>
+                    <dd className="text-gray-700">
+                      Provide solutions to complex Computer Science and Engineering problems using the latest hardware and software tools, along with analytical skills, to arrive at cost-effective and appropriate solutions.
+                    </dd>
+                  </div>
 
-<li>Entrepreneurship skills and career management : Social-awareness & environmental-wisdom along with ethical responsibility to lead a successful career and to sustain passion and zeal for real-world applications using optimal resources as an Entrepreneur.</li>
+                  <div>
+                    <dt className="font-bold text-indigo-600">PSO3: Entrepreneurship Skills and Career Management</dt>
+                    <dd className="text-gray-700">
+                      Demonstrate social awareness, environmental wisdom, and ethical responsibility to lead a successful career and sustain a passion for real-world applications using optimal resources as an entrepreneur.
+                    </dd>
+                  </div>
+                </dl>
 
-
-                </p>
               </TabsContent>
             </Tabs>
           </div>
@@ -105,52 +140,88 @@ const Index = () => {
 
       {/* Goal Dialog */}
       <Dialog open={isGoalDialogOpen} onOpenChange={setIsGoalDialogOpen}>
-        <DialogContent className="max-w-3xl">
+        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-department-purple">Department Goal</DialogTitle>
-            <DialogDescription className="text-gray-700 mt-4">
+            <DialogTitle className="text-xl font-bold text-department-purple">Department Goals</DialogTitle>
+            <DialogDescription className="text-gray-700 mt-2 text-sm">
+              <dl className="space-y-4">
 
-<li>Regularly update the curriculum to reflect emerging technologies such as AI, IoT, cybersecurity, and cloud computing.</li>
+                <div>
+                  <dt className="font-semibold text-indigo-600">Deliver Industry-Relevant Curriculum</dt>
+                  <dd className="text-gray-700">
+                    Regularly we update the curriculum yearly to reflect emerging technologies such as AI, IoT, cybersecurity, and cloud computing.
+                  </dd>
+                </div>
 
-<li>Foster Research and Innovation in IT</li>
+                <div>
+                  <dt className="font-semibold text-indigo-600">Research and Innovation in IT</dt>
+                  <dd className="text-gray-700">
+                    Promote interdisciplinary research, innovative ideas, and publication in reputed journals and conferences.
+                  </dd>
+                </div>
 
-<li>Promote interdisciplinary research, innovation labs, and publication in reputed journals and conferences.</li>
+                <div>
+                  <dt className="font-semibold text-indigo-600">Enhance Student Employability and Skill Development</dt>
+                  <dd className="text-gray-700">
+                    Provide certifications, internships, and training programs in collaboration with industry partners.
+                  </dd>
+                </div>
 
-<li>Enhance Student Employability and Skill Development</li>
+                <div>
+                  <dt className="font-semibold text-indigo-600">Strengthen Industry-Academia Collaboration</dt>
+                  <dd className="text-gray-700">
+                    Build MoUs with tech companies for internships, guest lectures, real-world projects, and curriculum inputs.
+                  </dd>
+                </div>
 
-<li>Provide certifications, internships, and training programs in collaboration with industry partners.</li>
+                <div>
+                  <dt className="font-semibold text-indigo-600">Ensure Quality Teaching and Continuous Learning</dt>
+                  <dd className="text-gray-700">
+                    Adopt modern pedagogical tools such as Project-Based Learning, flipped classrooms, online labs, and collaborative platforms.
+                  </dd>
+                </div>
 
-<li>Strengthen Industry-Academia Collaboration</li>
+                <div>
+                  <dt className="font-semibold text-indigo-600">Encourage Entrepreneurship and Start-up Culture</dt>
+                  <dd className="text-gray-700">
+                    Support incubation centers, hackathons, and innovation challenges for students and faculty.
+                  </dd>
+                </div>
 
-<li>Build partnerships with tech companies for internships, guest lectures, real-world projects, and curriculum inputs.</li>
+                <div>
+                  <dt className="font-semibold text-indigo-600">Improve Infrastructure and Technological Resources</dt>
+                  <dd className="text-gray-700">
+                    Continuously upgrade labs, servers, and software tools to align with current industry standards.
+                  </dd>
+                </div>
 
-<li>Ensure Quality Teaching and Continuous Learning</li>
+                <div>
+                  <dt className="font-semibold text-indigo-600">Promote Ethical and Responsible Use of Technology</dt>
+                  <dd className="text-gray-700">
+                    Emphasize cybersecurity, digital ethics, and data privacy in teaching and practice.
+                  </dd>
+                </div>
 
-<li>Adopt modern pedagogical tools such as flipped classrooms, online labs, and collaborative platforms.</li>
+                <div>
+                  <dt className="font-semibold text-indigo-600">Achieve National and International Accreditations</dt>
+                  <dd className="text-gray-700">
+                    Align programs with NBA standards to ensure quality and global recognition.
+                  </dd>
+                </div>
 
-<li>Encourage Entrepreneurship and Start-up Culture</li>
+                <div>
+                  <dt className="font-semibold text-indigo-600">Encourage Global Exposure and Collaboration</dt>
+                  <dd className="text-gray-700">
+                    Facilitate student and faculty exchange programs, MOUs with international institutions, and joint research.
+                  </dd>
+                </div>
 
-<li>Support incubation centers, hackathons, and innovation challenges for students and faculty.</li>
-
-<li>Improve Infrastructure and Technological Resources</li>
-
-<li>Continuously upgrade labs, servers, and software tools to align with current industry standards.</li>
-
-<li>Promote Ethical and Responsible Use of Technology</li>
-
-<li>Emphasize cybersecurity, digital ethics, and data privacy in teaching and practice.</li>
-
-<li>Achieve National and International Accreditations</li>
-
-<li>Align programs with NBA/ABET accreditation standards to ensure quality and global recognition.</li>
-
-<li>Encourage Global Exposure and Collaboration</li>
-
-<li>Facilitate student and faculty exchange programs, MOUs with international institutions, and joint research.</li>
+              </dl>
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
       </Dialog>
+
 
       <div className="container mx-auto px-4 py-16 transform-gpu will-change-auto">
         {/* Stats Section */}
