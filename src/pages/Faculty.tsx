@@ -191,7 +191,7 @@ const Faculty = () => {
             <CardContent className="p-0">
               <div className="bg-gradient-to-r from-department-blue/5 to-department-blue/10 p-4 flex items-center gap-3">
                 <Avatar className="h-14 w-14 border-2 border-white shadow-md">
-                  <img src="/placeholder.svg" alt="Bala Mani" className="h-full w-full object-cover rounded-full" />
+                  <img src="/mane.jpeg" alt="Bala Mani" className="h-full w-full object-cover rounded-full" />
                 </Avatar>
                 <div>
                   <h3 className="font-semibold text-base font-heading">Bala Mani</h3>
