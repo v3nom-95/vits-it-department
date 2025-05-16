@@ -115,7 +115,7 @@ const Clubs = () => {
       clubId: 1, // CodeCraft
       title: "Algorithm Deep Dive Workshop",
       description: "Learn advanced algorithmic techniques including dynamic programming, graph algorithms, and optimization strategies.",
-      date: "July 5, 2025",
+      date: "November 16, 2025",
       time: "2:00 PM - 3:30 PM",
       location: "B-603",
       host: "Dept. of IT",
