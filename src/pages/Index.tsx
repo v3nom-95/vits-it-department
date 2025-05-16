@@ -23,19 +23,7 @@ const Index = () => {
               <p className="text-gray-700 text-lg mb-8 transform-gpu will-change-auto">
                 Shaping the future through innovation, quality education, and technological excellence. Join us in our journey to create tomorrow's IT leaders.
               </p>
-              <div className="mt-4">
-                <h2 className="text-lg font-bold text-department-purple px-4 rounded mb-3">Communication Channels:</h2>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
-                  <li>Department Website</li>
-                  <li>Annual Reports &amp; Strategic Plans</li>
-                  <li>Newsletters &amp; Email Bulletins</li>
-                  <li>Stakeholder Meetings (Industry, Alumni, and BOS members)</li>
-                  <li>Orientation Programs</li>
-                  <li>Social Media &amp; Digital Platforms</li>
-                  <li>Departmental Events &amp; Seminars</li>
-                  <li>Posters &amp; Displays</li>
-                </ul>
-              </div>
+              
 
             </div>
             <div className="md:w-1/2 animate-fade-in transform-gpu will-change-auto" style={{ animationDelay: '0.2s' }}>
