@@ -17,6 +17,7 @@ const NavBar = () => {
     { path: '/iii', label: 'III (Industry Institution Interaction)' },
     { path: '/achievements', label: 'Achievements' },
     { path: '/research', label: 'Research' },
+    { path: '/placements', label: 'Placements' },
     { path: '/contact', label: 'Contact' }
   ];
 
