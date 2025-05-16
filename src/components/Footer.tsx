@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-4">
       <div className="container mx-auto px-4 text-center">
-        <p>©  IT Department. All rights reserved.</p>
+        <p>©  All rights reserved to Department IT, VITS, Deshmukh</p>
       </div>
     </footer>
   );
