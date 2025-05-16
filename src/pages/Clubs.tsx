@@ -202,17 +202,16 @@ const Clubs = () => {
     {
       id: 8,
       clubId: 5, // Sports club
-      title: "Inter-Department Cricket Tournament",
-      description: "Departments compete in a knockout cricket tournament. Open to all students!",
+      title: "Intra-Department Cricket Tournament",
+      description: "Department compete in a knockout cricket tournament. Open to all students!",
       date: "September 10, 2025",
       time: "2:00 PM - 6:00 PM",
       location: "Cricket Ground",
       host: "Sports club",
-      imageSrc: "https://images.unsplash.com/photo-1517649763962-0c623066013b",
+      imageSrc: "/sp1.jpeg",
       photos: [
-        "https://images.unsplash.com/photo-1517649763962-0c623066013b",
-        "https://images.unsplash.com/photo-1505843279827-4b1d06b7a6c6",
-        "https://images.unsplash.com/photo-1464983953574-0892a716854b"
+        "/sp1.jpeg",
+        
       ]
     }
   ];
