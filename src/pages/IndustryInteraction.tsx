@@ -127,24 +127,32 @@ const IndustryInteraction = () => {
   ]; */}
 
   const studentInteractions: StudentInteraction[] = [
-    
+   {
+      id: 1,
+      studentName: "Chiluveru Navya Sri",
+      rollNumber: "22891A1213",
+      organization: "StartupIndia",
+      interactionType: "Internship",
+      date: "January - March, 2025",
+      certificate: "/nvin.jpeg"
+    },
     {
       id: 2,
-      studentName: "Vure Sathvik",
-      rollNumber: "23891A1264",
-      organization: "Salesforce",
-      interactionType: "Community event",
-      date: "April 19, 2025",
-      certificate: "/sf.jpeg"
+      studentName: "M Sai Rithika",
+      rollNumber: "22891A1232",
+      organization: "StartupIndia",
+      interactionType: "Internship",
+      date: "January - March, 2025",
+      certificate: "/smin.jpeg"
     },
     {
       id: 3,
-      studentName: "Idukuda Venkatapathi Babu",
-      rollNumber: "23891A1225",
-      organization: "Salesforce",
-      interactionType: "Community meeting",
-      date: "April 19, 2025",
-      certificate: "/sf.jpeg"
+      studentName: "Sai Rishika Madala",
+      rollNumber: "22891A1251",
+      organization: "SatrtupIndia",
+      interactionType: "Internship",
+      date: "January - March, 2025",
+      certificate: "/rmin.jpeg"
     },
     {
       id: 4,
@@ -157,30 +165,30 @@ const IndustryInteraction = () => {
     },
     {
       id: 5,
-      studentName: "M Sai Rithika",
-      rollNumber: "22891A1232",
-      organization: "StartupIndia",
-      interactionType: "Internship",
-      date: "January - March, 2025",
-      certificate: "/smin.jpeg"
+      studentName: "Idukuda Venkatapathi Babu",
+      rollNumber: "23891A1225",
+      organization: "Salesforce",
+      interactionType: "Community meeting",
+      date: "April 19, 2025",
+      certificate: "/sf.jpeg"
     },
     {
       id: 6,
-      studentName: "Chiluveru Navya Sri",
-      rollNumber: "22891A1213",
-      organization: "StartupIndia",
-      interactionType: "Internship",
-      date: "January - March, 2025",
-      certificate: "/nvin.jpeg"
+      studentName: "Vure Sathvik",
+      rollNumber: "23891A1264",
+      organization: "Salesforce",
+      interactionType: "Community event",
+      date: "April 19, 2025",
+      certificate: "/sf.jpeg"
     },
     {
       id: 7,
-      studentName: "Sai Rishika Madala",
-      rollNumber: "22891A1251",
-      organization: "SatrtupIndia",
-      interactionType: "Internship",
-      date: "January - March, 2025",
-      certificate: "/rmin.jpeg"
+      studentName: "Idukuda Venkatapathi Babu",
+      rollNumber: "23891A1225",
+      organization: "IIT Madras",
+      interactionType: "Diploma Course",
+      date: "April 30, 2025",
+      certificate: "/sf.jpeg"
     },
     {
       id: 8,
@@ -202,11 +210,191 @@ const IndustryInteraction = () => {
     },
     {
       id: 10,
+      studentName: "G VENKATA SRIHARSHARAM ",
+      rollNumber: "23891A1222",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 5, 2025",
+      certificate: "/13ad.jpeg"
+    },
+    {
+      id: 11,
+      studentName: "K SHIVA PRANEETH REDDY",
+      rollNumber: "23891A1228",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 5, 2025",
+      certificate: "/13ad.jpeg"
+    },
+    {
+      id: 12,
       studentName: "Konduri Mohith",
       rollNumber: "23891A1232",
       organization: "Microsoft",
       interactionType: "Bootcamp",
       date: "May 5, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 13,
+      studentName: "PAGIDIMARRI BHARATH KUMAR",
+      rollNumber: "23891A1244",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 5, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 14,
+      studentName: "BOBBALA ROHITH REDDY",
+      rollNumber: "22891A1209",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 15,
+      studentName: "CANJEEVARAM RAJU HRITHIK",
+      rollNumber: "22891A1211",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 16,
+      studentName: "CHILUVERU NAVYA SRI",
+      rollNumber: "22891A1213",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 17,
+      studentName: "GODHALA HARIKA REDDY",
+      rollNumber: "22891A1220",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 18,
+      studentName: "KATUKURI VIJITHA",
+      rollNumber: "22891A1226",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 19,
+      studentName: "KOMIRISHETTY KEERTHANA",
+      rollNumber: "22891A1227",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 20,
+      studentName: "M SAI RITHIKA",
+      rollNumber: "22891A1232",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 21,
+      studentName: "MUSUNURU PRANEETHA",
+      rollNumber: "22891A1236",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 22,
+      studentName: "PAMPANA SAI KRISHNA",
+      rollNumber: "22891A1237",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 23,
+      studentName: "PEDDI SRAVANI",
+      rollNumber: "22891A1239",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 24,
+      studentName: "PURALASETTI SUPRIYA",
+      rollNumber: "22891A1244",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 25,
+      studentName: "SAI RISHITHA MADALA",
+      rollNumber: "22891A1251",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 26,
+      studentName: "SURUGU HARSHITH KUMAR GOUD",
+      rollNumber: "22891A1257",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 27,
+      studentName: "VADDAPALLY UTTEJ KUMAR",
+      rollNumber: "22891A1259",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 28,
+      studentName: "VEMU SATHVIKA",
+      rollNumber: "22891A1262",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 29,
+      studentName: "SHAIK MUSKAN",
+      rollNumber: "23895A1203",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
+      certificate: "31ad.jpeg"
+    },
+    {
+      id: 30,
+      studentName: "JAKARAM JAGANNATH PREETHAM",
+      rollNumber: "23895A1205",
+      organization: "Microsoft",
+      interactionType: "Bootcamp",
+      date: "May 10, 2025",
       certificate: "31ad.jpeg"
     }
   ];
@@ -252,6 +440,49 @@ const IndustryInteraction = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* List of Students Referred for Placements */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold font-heading text-department-dark mb-6">Students Referred for Placements</h2>
+          <div className="overflow-x-auto">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="font-bold">Student Name</TableHead>
+                  <TableHead className="font-bold">Roll Number</TableHead>
+                  <TableHead className="font-bold">Company</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+              <TableRow>
+                <TableCell> 21891A1201 </TableCell>
+                <TableCell> A VENKATA SAI SUMANTH </TableCell>
+                <TableCell> GSPANN </TableCell>
+              </TableRow>
+                <TableRow>
+                  <TableCell> 21891A1206 </TableCell>
+                  <TableCell> BOBBALA ASHWINI </TableCell>
+                  <TableCell> GSPANN </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell> 21891A1233 </TableCell>
+                  <TableCell> KUNCHALA CHANDRA SHEKAR </TableCell>
+                  <TableCell> GSPANN </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell> 21891A1234 </TableCell>
+                  <TableCell> KUNTA MALLIKRAJ </TableCell>
+                  <TableCell> GSPANN </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell> 21891A1240 </TableCell>
+                  <TableCell> MANDALAPU NIKHITHA </TableCell>
+                  <TableCell> GSPANN </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </div>
         </div>
 
         {/* Student Interaction Records Section */}
