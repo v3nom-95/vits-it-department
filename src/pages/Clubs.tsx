@@ -192,9 +192,9 @@ const Clubs = () => {
       time: "9:00 AM - 5:00 PM",
       location: "Cricket Ground",
       host: "Sports Committee",
-      imageSrc: "sp2.jpeg",
+      imageSrc: "sp2.jpg",
       photos: [
-        "sp2.jpeg",
+        "sp2.jpg",
         
       ]
     },
@@ -207,9 +207,9 @@ const Clubs = () => {
       time: "3:30 PM - 5:30 PM",
       location: "Cricket Ground",
       host: "Sports club",
-      imageSrc: "/sp1.jpeg",
+      imageSrc: "/sp1.jpg",
       photos: [
-        "/sp1.jpeg",
+        "/sp1.jpg",
         
       ]
     }
