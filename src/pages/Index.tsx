@@ -234,8 +234,8 @@ const Index = () => {
                 <div className="text-gray-700 transform-gpu will-change-auto">Placement Rate</div>
               </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-md card-hover-effect transform-gpu will-change-auto">
-                <div className="text-4xl font-bold text-department-blue mb-2 transform-gpu will-change-auto">15+</div>
-                <div className="text-gray-700 transform-gpu will-change-auto">Research Works</div>
+                <div className="text-4xl font-bold text-department-blue mb-2 transform-gpu will-change-auto">40+</div>
+                <div className="text-gray-700 transform-gpu will-change-auto">Research Contributions</div>
               </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-md card-hover-effect transform-gpu will-change-auto">
                 <div className="text-4xl font-bold text-department-purple mb-2 transform-gpu will-change-auto">20+</div>
