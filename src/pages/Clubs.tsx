@@ -54,7 +54,7 @@ const Clubs = () => {
       description: "A club focussed on improving your verbal",
       studentCoordinators: ["M. Sai Rishitha", "JM. Praneetha", "M. Sai Rithika", "C. Navya Sri", "V. Sathvika"],
       meetingSchedule: "Every Tuesday, 3:30 PM - 5:30 PM",
-      activities: ["Seminars", "Presentations", "JAM sessions"],
+      activities: ["Social Awareness activities", "Presentations", "JAM sessions"],
       color: "blue",
       members: 136,
       established: "2022"
