@@ -85,7 +85,7 @@ const Clubs = () => {
       id: 5,
       name: "Sports club",
       description: "A club dedicated to sports, fitness, and athletic events for students.",
-      studentCoordinators: ["John Doe", "Jane Smith", "Alice Johnson", "Bob Brown", "Charlie Davis"],
+      studentCoordinators: ["R Saivivek", "S.Harshith kumar", "S.Aishwarya", "K.Asritha", "S. Sadwika"],
       meetingSchedule: "Every Friday, 4:00 PM - 5:30 PM",
       activities: ["Football matches", "Cricket tournaments", "Athletics training"],
       color: "purple",
