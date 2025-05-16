@@ -159,15 +159,14 @@ const Clubs = () => {
       clubId: 2, // AI Innovators
       title: "Social Consciousness Seminar",
       description: "A seminar on the importance of social awareness and responsibility.",
-      date: "December 12, 2024",
+      date: "Every week on Tuesday",
       time: "3:30 AM - 5:30 PM",
       location: "604-A",
       host: "Department of IT",
       imageSrc: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
       photos: [
-        "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-        "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475"
+        "/spe1.jpeg",
+        
       ]
     },
     {
