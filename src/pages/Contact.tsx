@@ -76,19 +76,19 @@ const Contact = () => {
                 <div className="space-y-3">
                   <p className="flex items-center">
                     <span className="font-medium w-20">Phone:</span>
-                    <span>+91 0000000000</span>
+                    <span>+91 9494441877</span>
                   </p>
                   <p className="flex items-center">
                     <span className="font-medium w-20">Email:</span>
-                    <span>it.department@vits.ac.in</span>
+                    <span>vitsitonline1@vignanits.ac.in</span>
                   </p>
                   <p className="flex items-center">
                     <span className="font-medium w-20">Office:</span>
-                    <span>Block B, Second Floor</span>
+                    <span>Room No 413 , Fourth Floor</span>
                   </p>
                   <p className="flex items-center">
                     <span className="font-medium w-20">Hours:</span>
-                    <span>9:00 AM - 5:00 PM (Monday to Friday)</span>
+                    <span>8:30 AM - 5:00 PM (Monday to Saturday)</span>
                   </p>
                 </div>
               </CardContent>
