@@ -85,7 +85,7 @@ const Placements = () => {
           ))}
         </div>
         <div className="mt-12 text-center text-gray-600 text-sm">
-          * Click on a card to highlight and compare placement years.
+          
         </div>
       </div>
     </Layout>
