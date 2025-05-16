@@ -74,7 +74,7 @@ const Clubs = () => {
       id: 4,
       name: "Arts Club",
       description: "A club that unleashes the artistic you.",
-      studentCoordinators: ["John Doe", "Jane Smith", "Alice Johnson", "Bob Brown", "Charlie Davis"],
+      studentCoordinators: ["D.suraj", "Sk.muskan", "K.vijitha", "K.balaji", "V.charvitha"],
       meetingSchedule: "Every Thursday, 3:30 PM - 5:00 PM",
       activities: ["Poster making", "Drawing competitions", "Quizzes"],
       color: "blue",
