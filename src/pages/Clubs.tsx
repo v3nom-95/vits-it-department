@@ -173,8 +173,8 @@ const Clubs = () => {
     },
     {
       id: 6,
-      clubId: 1, // AI Innovators
-      title: "AI Ethics Panel Discussion",
+      clubId: 4, // AI Innovators
+      title: "Ethics Panel Discussion",
       description: "Join industry experts and academics for a thought-provoking discussion on the ethical implications of artificial intelligence.",
       date: "July 18, 2025",
       time: "4:00 PM - 6:00 PM",
