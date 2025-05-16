@@ -186,12 +186,12 @@ const Clubs = () => {
     {
       id: 7,
       clubId: 5, // Sports club
-      title: "Annual Sports Meet",
-      description: "A grand event featuring multiple sports competitions including football, cricket, and athletics.",
-      date: "August 20, 2025",
+      title: "SilverJubilee Sports Meet",
+      description: "A grand event featuring multiple sports competitions including football and cricket.",
+      date: "Feb, 2025",
       time: "9:00 AM - 5:00 PM",
       location: "Cricket Ground",
-      host: "Sports Committee",
+      host: "Sports Club in collaboration with the Department of IT",
       imageSrc: "sp2.jpg",
       photos: [
         "sp2.jpg",
@@ -206,7 +206,7 @@ const Clubs = () => {
       date: "July 4, 2024",
       time: "3:30 PM - 5:30 PM",
       location: "Cricket Ground",
-      host: "Sports club",
+      host: "Department of IT",
       imageSrc: "/sp1.jpg",
       photos: [
         "/sp1.jpg",
