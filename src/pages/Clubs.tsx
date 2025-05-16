@@ -115,7 +115,7 @@ const Clubs = () => {
       clubId: 1, // CodeCraft
       title: "Algorithm Deep Dive Workshop",
       description: "Learn advanced algorithmic techniques including dynamic programming, graph algorithms, and optimization strategies.",
-      date: "November 16, 2025",
+      date: "November 16, 2024",
       time: "2:00 PM - 3:30 PM",
       location: "B-603",
       host: "Dept. of IT",
@@ -172,17 +172,15 @@ const Clubs = () => {
     {
       id: 6,
       clubId: 4, // AI Innovators
-      title: "Ethics Panel Discussion",
-      description: "Join industry experts and academics for a thought-provoking discussion on the ethical implications of artificial intelligence.",
-      date: "July 18, 2025",
-      time: "4:00 PM - 6:00 PM",
-      location: "Main Auditorium",
-      host: "Prof. Raj Malhotra",
+      title: "Jumble Jamboree",
+      description: "A fun-filled event with games and activities to enhance your creativity and teamwork.",
+      date: "August 9, 2024",
+      time: "2:00 PM - 3:30 PM",
+      location: "604-A",
+      host: "Department of IT",
       imageSrc: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
       photos: [
-        "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
+        "/art1.jpeg",
       ]
     },
     {
