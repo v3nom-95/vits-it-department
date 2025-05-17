@@ -12,6 +12,7 @@ import IndustryInteraction from "./pages/IndustryInteraction";
 import Achievements from "./pages/Achievements";
 import Research from "./pages/Research";
 import Placements from "./pages/Placements";
+import MOUs from './pages/MOUs';
 
 const queryClient = new QueryClient();
 
@@ -24,8 +25,9 @@ const App = () => (
         <div className="transform-gpu will-change-auto">
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/clubs" element={<Clubs />} />
             <Route path="/faculty" element={<Faculty />} />
+            <Route path="/clubs" element={<Clubs />} />
+            <Route path="/mous" element={<MOUs />} />
             <Route path="/achievements" element={<Achievements />} />
             <Route path="/research" element={<Research />} />
             <Route path="/placements" element={<Placements />} />

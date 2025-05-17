@@ -12,11 +12,12 @@ const NavBar = () => {
 
   const navLinks = [
     { path: '/', label: 'Home' },
-    { path: '/clubs', label: 'Clubs' },
     { path: '/faculty', label: 'Faculty' },
-    { path: '/iii', label: 'III (Industry Institution Interaction)' },
-    { path: '/achievements', label: 'Achievements' },
+    { path: '/mous', label: 'MOUs' },
     { path: '/research', label: 'Research' },
+    { path: '/iii', label: 'III (Industry Institution Interaction)' },
+    { path: '/clubs', label: 'Clubs' },
+    { path: '/achievements', label: 'Achievements' },
     { path: '/placements', label: 'Placements' },
     { path: '/contact', label: 'Contact' }
   ];
