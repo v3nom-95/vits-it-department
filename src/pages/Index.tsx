@@ -23,7 +23,7 @@ const Index = () => {
               <p className="text-gray-700 text-lg mb-8 transform-gpu will-change-auto">
                 Shaping the future through innovation, quality education, and technological excellence. Join us in our journey to create tomorrow's IT leaders.
               </p>
-              
+
 
             </div>
             <div className="md:w-1/2 animate-fade-in transform-gpu will-change-auto" style={{ animationDelay: '0.2s' }}>
@@ -222,7 +222,7 @@ const Index = () => {
                 <div className="text-gray-700 transform-gpu will-change-auto">Placement Rate</div>
               </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-md card-hover-effect transform-gpu will-change-auto">
-                <div className="text-4xl font-bold text-department-blue mb-2 transform-gpu will-change-auto">40+</div>
+                <div className="text-4xl font-bold text-department-blue mb-2 transform-gpu will-change-auto">65+</div>
                 <div className="text-gray-700 transform-gpu will-change-auto">Research Contributions</div>
               </div>
               <div className="text-center p-6 bg-white rounded-lg shadow-md card-hover-effect transform-gpu will-change-auto">

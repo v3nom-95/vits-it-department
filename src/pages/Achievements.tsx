@@ -18,9 +18,9 @@ const Achievements = () => {
     },
 
     {
-      studentName: "B. Pavan Babu",
-      rollNo: "22891A1207",
-      issuedBy: "Rao Associates",
+      studentName: "K. Sanjana",
+      rollNo: "21891A1221",
+      issuedBy: "Covalensedigital Solutions Private Limited",
       topic: "Internship",
     },
 
