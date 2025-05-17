@@ -11,18 +11,19 @@ const Achievements = () => {
       topic: "Foundation level in Programming and Data Science",
     },
     {
+      studentName: "K. Sanjana",
+      rollNo: "21891A1221",
+      issuedBy: "Covalensedigital Solutions Private Limited",
+      topic: "Internship",
+    },
+    {
       studentName: "B. Pavan Babu",
       rollNo: "22891A1207",
       issuedBy: "Rao Associates",
       topic: "Internship",
     },
 
-    {
-      studentName: "K. Sanjana",
-      rollNo: "21891A1221",
-      issuedBy: "Covalensedigital Solutions Private Limited",
-      topic: "Internship",
-    },
+    
 
     {
       studentName: "Chiluveru Navya Sri, M Sai Rithika, Sai Rishika Madala",
