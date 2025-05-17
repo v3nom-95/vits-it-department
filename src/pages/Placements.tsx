@@ -16,7 +16,7 @@ const placementData = [
     year: '2023-2024',
     studentsPlaced: 37,
     offers: 54,
-    numberOfStudentsEligible: 60, // Renamed field
+    numberOfStudentsEligible: 49, // Renamed field
     topCompanies: ['Infosys', 'TCS', 'Cognizant'],
     highlight: 'Highest package: 6 LPA',
     color: 'blue',
@@ -25,7 +25,7 @@ const placementData = [
     year: '2024-2025',
     studentsPlaced: 16,
     offers: 24,
-    numberOfStudentsEligible: 58, // Renamed field
+    numberOfStudentsEligible: 46, // Renamed field
     topCompanies: ['Rinex', 'GlobalLogic', 'Infosys', 'Cognizant'],
     highlight: 'Highest package 10 LPA offered. Ongoing placements',
     color: 'purple',
