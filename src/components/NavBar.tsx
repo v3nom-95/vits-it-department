@@ -15,7 +15,7 @@ const NavBar = () => {
     { path: '/faculty', label: 'Faculty' },
     { path: '/mous', label: 'MOUs' },
     { path: '/research', label: 'Research' },
-    { path: '/iii', label: 'III (Industry Institution Interaction)' },
+    { path: '/iii', label: 'III (Industry Institute Interaction)' },
     { path: '/clubs', label: 'Clubs' },
     { path: '/achievements', label: 'Achievements' },
     { path: '/placements', label: 'Placements' },
@@ -40,7 +40,7 @@ const NavBar = () => {
               <Link 
                 key={link.path} 
                 to={link.path} 
-                className={`relative px-2 py-1 text-lg font-medium ${isActive(link.path) ? 'text-white' : 'text-white/80 hover:text-white'}`}
+                className={`relative px-2 py-1 text-md font-medium ${isActive(link.path) ? 'text-white' : 'text-white/80 hover:text-white'}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}

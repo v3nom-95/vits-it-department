@@ -69,7 +69,7 @@ const MOUs = () => {
 							>
 								<div>
 									<h2 className="text-2xl font-bold text-department-purple mb-2 flex items-center gap-2">
-										<span className="inline-block w-2 h-2 rounded-full bg-department-purple"></span>
+
 										{mou.organization}
 									</h2>
 									<p className="text-gray-600 font-medium mb-1">

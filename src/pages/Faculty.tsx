@@ -139,80 +139,132 @@ const Faculty = () => {
     },
   ];
 
+  const supportingStaffMembers = [
+    {
+      id: 101,
+      name: "Maha Lakshmi",
+      position: "Lab Incharge",
+      image: "/ma.jpeg"
+    },
+    {
+      id: 102,
+      name: "V Surya Prakash",
+      position: "System / Network Admin",
+      image: "/a1.jpeg" // You can use a placeholder image
+    },
+    {
+      id: 103,
+      name: "G Disendra Kumar",
+      position: "System / Network Admin",
+      image: "/a2.jpeg" // You can use a placeholder image
+    },
+    {
+      id: 104,
+      name: "V Venu madhav",
+      position: "System / Network Admin",
+      image: "/a3.jpeg" // You can use a placeholder image
+    },
+
+    {
+      id: 105,
+      name: "Bala Mani",
+      position: "DTP Operator",
+      image: "/mane.jpeg"
+    },
+
+  ];
+
+  const StaffCard = ({ staffMember, index }) => {
+    return (
+        <Card key={staffMember.id} className="overflow-hidden shadow-md card-hover-effect">
+          <CardContent className="p-0">
+            <div
+                className={`bg-gradient-to-r ${
+                    index % 2 === 0 ? 'from-department-blue/5 to-department-blue/10' : 'from-department-purple/5 to-department-purple/10'
+                } p-6 flex items-center gap-4`}
+            >
+              <Avatar className="h-20 w-20 border-2 border-white shadow-md">
+                {staffMember.image ? (
+                    <img src={staffMember.image} className="h-full w-full object-cover rounded-full" alt={staffMember.name} />
+                ) : (
+                    <AvatarFallback
+                        className={`${
+                            index % 2 === 0 ? 'bg-department-blue' : 'bg-department-purple'
+                        } text-white text-xl font-bold`}
+                    >
+                      {staffMember.name.split(' ').length > 1
+                          ? staffMember.name.split(' ')[0][0] + staffMember.name.split(' ')[1][0]
+                          : staffMember.name.slice(0, 2).toUpperCase()}
+                    </AvatarFallback>
+                )}
+              </Avatar>
+              <div>
+                <h3 className="font-semibold text-lg font-heading">{staffMember.name}</h3>
+                <p className={`${index % 2 === 0 ? 'text-department-blue' : 'text-department-purple'} font-medium`}>
+                  {staffMember.position}
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+    );
+  };
+
   return (
-    <Layout>
-      <section className="bg-gradient-to-r from-department-purple/10 to-department-blue/10 py-12">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4 text-center text-department-dark">Our Faculty</h1>
-          <p className="text-gray-700 max-w-3xl mx-auto text-center mb-0">
-            Meet our team of experienced educators and researchers dedicated to excellence in IT education.
+      <Layout>
+        <section className="bg-gradient-to-r from-department-purple/10 to-department-blue/10 py-12">
+          <div className="container mx-auto px-4">
+            <h1 className="text-4xl font-bold mb-4 text-center text-department-dark">Our Faculty</h1>
+            <p className="text-gray-700 max-w-3xl mx-auto text-center mb-0">
+              Meet our team of experienced educators and researchers dedicated to excellence in IT education.
+            </p>
+          </div>
+        </section>
+
+        <div className="container mx-auto px-4 py-12">
+          <p className="text-gray-700 mx-auto mb-12 max-w-4xl text-center">
+            Our department has highly qualified and experienced faculty members dedicated to providing
+            quality education and mentoring to students. They bring a wealth of knowledge from both
+            academia and industry to ensure our students receive the best possible education.
           </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {facultyMembers.map((faculty, index) => (
+                <Card key={faculty.id} className="overflow-hidden shadow-md card-hover-effect">
+                  <CardContent className="p-0">
+                    <div className={`bg-gradient-to-r ${index % 2 === 0 ? 'from-department-blue/5 to-department-blue/10' : 'from-department-purple/5 to-department-purple/10'} p-6 flex items-center gap-4`}>
+                      <Avatar className="h-20 w-20 border-2 border-white shadow-md">
+                        {faculty.image ? (
+                            <img src={faculty.image} className="h-full w-full object-cover rounded-full" alt={faculty.name} />
+                        ) : (
+                            <AvatarFallback className={`${index % 2 === 0 ? 'bg-department-blue' : 'bg-department-purple'} text-white text-xl font-bold`}>
+                              {faculty.name.split(' ').length > 1
+                                  ? faculty.name.split(' ')[0][0] + faculty.name.split(' ')[1][0]
+                                  : faculty.name.slice(0, 2).toUpperCase()}
+                            </AvatarFallback>
+                        )}
+                      </Avatar>
+                      <div>
+                        <h3 className="font-semibold text-lg font-heading">{faculty.name}</h3>
+                        <p className={`${index % 2 === 0 ? 'text-department-blue' : 'text-department-purple'} font-medium`}>{faculty.position}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+            ))}
+          </div>
         </div>
-      </section>
 
-      <div className="container mx-auto px-4 py-12">
-        <p className="text-gray-700 mx-auto mb-12 max-w-4xl text-center">
-          Our department has highly qualified and experienced faculty members dedicated to providing 
-          quality education and mentoring to students. They bring a wealth of knowledge from both 
-          academia and industry to ensure our students receive the best possible education.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {facultyMembers.map((faculty) => (
-            <Card key={faculty.id} className="overflow-hidden shadow-md card-hover-effect">
-              <CardContent className="p-0">
-                <div className={`bg-gradient-to-r ${faculty.id % 2 === 0 ? 'from-department-blue/5 to-department-blue/10' : 'from-department-purple/5 to-department-purple/10'} p-6 flex items-center gap-4`}>
-                  <Avatar className="h-20 w-20 border-2 border-white shadow-md">
-                    {faculty.image ? (
-                      <img src={faculty.image} className="h-full w-full object-cover rounded-full" />
-                    ) : (
-                      <AvatarFallback className={`${faculty.id % 2 === 0 ? 'bg-department-blue' : 'bg-department-purple'} text-white text-xl font-bold`}>
-                        {faculty.name.split(' ').length > 1
-                          ? faculty.name.split(' ')[0][0] + faculty.name.split(' ')[1][0]
-                          : faculty.name.slice(0, 2).toUpperCase()}
-                      </AvatarFallback>
-                    )}
-                  </Avatar>
-                  <div>
-                    <h3 className="font-semibold text-lg font-heading">{faculty.name}</h3>
-                    <p className={`${faculty.id % 2 === 0 ? 'text-department-blue' : 'text-department-purple'} font-medium`}>{faculty.position}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-
-      <section className="supporting-staff">
-        <h2 className="text-2xl font-bold mb-4 text-center text-department-dark">Supporting Staff</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center">
-          <Card className="overflow-hidden shadow-md card-hover-effect w-56 mx-auto">
-            <CardContent className="p-0">
-              <div className="bg-gradient-to-r from-department-blue/5 to-department-blue/10 p-4 flex items-center gap-3">
-                <Avatar className="h-14 w-14 border-2 border-white shadow-md">
-                  <img src="/ma.jpeg" alt="Bala Mani" className="h-full w-full object-cover rounded-full" />
-                </Avatar>
-                <div>
-                  <h3 className="font-semibold text-base font-heading">Mahalakshmi</h3>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="overflow-hidden shadow-md card-hover-effect w-56 mx-auto">
-            <CardContent className="p-0">
-              <div className="bg-gradient-to-r from-department-blue/5 to-department-blue/10 p-4 flex items-center gap-3">
-                <Avatar className="h-14 w-14 border-2 border-white shadow-md">
-                  <img src="/mane.jpeg" alt="Mahalakshmi" className="h-full w-full object-cover rounded-full" />
-                </Avatar>
-                <div>
-                  <h3 className="font-semibold text-base font-heading">Bala Mani</h3>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-    </Layout>
+        <section className="bg-gray-100 py-12 ">
+          <div className="container mx-auto px-4 ">
+            <h2 className="text-2xl font-bold mb-4 text-center text-department-dark">Supporting Staff</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+              {supportingStaffMembers.map((staff, index) => (
+                  <StaffCard key={staff.id} staffMember={staff} index={index} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </Layout>
   );
 };
 
