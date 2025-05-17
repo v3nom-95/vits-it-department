@@ -231,7 +231,7 @@ const Clubs = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4 text-center text-department-dark">Department Clubs</h1>
           <p className="text-gray-700 max-w-3xl mx-auto text-center mb-0">
-            Join our student-led clubs to enhance your skills, network with peers, and participate in exciting tech events.
+            Our department has a vibrant student community with several active clubs and societies. These clubs provide a platform for students to pursue their interests, develop leadership skills, and participate in various technical, cultural, and social activities throughout the year.
           </p>
         </div>
       </section>
