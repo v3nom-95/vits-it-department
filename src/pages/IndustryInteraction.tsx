@@ -29,7 +29,17 @@ const IndustryInteraction = () => {
   const [showAttendees, setShowAttendees] = useState(false);
   const [showCertificate, setShowCertificate] = useState<StudentInteraction | null>(null);
   const { toast } = useToast();
-  
+
+  function toSmartTitleCase(name: string) {
+    return name
+        .toLowerCase()
+        .split(' ')
+        .map(word =>
+            word.charAt(0).toUpperCase() + word.slice(1)
+        )
+        .join(' ');
+  }
+
   interface Attendee {
     id: number;
     name: string;
@@ -457,27 +467,27 @@ const IndustryInteraction = () => {
               <TableBody>
               <TableRow>
                 <TableCell> 21891A1201 </TableCell>
-                <TableCell> A VENKATA SAI SUMANTH </TableCell>
+                <TableCell> A Venkata Sai Sumanth </TableCell>
                 <TableCell> GSPANN </TableCell>
               </TableRow>
                 <TableRow>
                   <TableCell> 21891A1206 </TableCell>
-                  <TableCell> BOBBALA ASHWINI </TableCell>
+                  <TableCell> Bobbala Ashwini </TableCell>
                   <TableCell> GSPANN </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell> 21891A1233 </TableCell>
-                  <TableCell> KUNCHALA CHANDRA SHEKAR </TableCell>
+                  <TableCell> Kunchala Chandra Shekar </TableCell>
                   <TableCell> GSPANN </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell> 21891A1234 </TableCell>
-                  <TableCell> KUNTA MALLIKRAJ </TableCell>
+                  <TableCell> Kunta Mallikraj </TableCell>
                   <TableCell> GSPANN </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell> 21891A1240 </TableCell>
-                  <TableCell> MANDALAPU NIKHITHA </TableCell>
+                  <TableCell> Mandalapu Nikhitha </TableCell>
                   <TableCell> GSPANN </TableCell>
                 </TableRow>
               </TableBody>
@@ -505,7 +515,7 @@ const IndustryInteraction = () => {
                   <TableRow key={interaction.id}>
                     <TableCell className="flex items-center gap-2">
                       <User size={16} className="text-department-purple" />
-                      {interaction.studentName}
+                      {toSmartTitleCase(interaction.studentName)}
                     </TableCell>
                     <TableCell>
                       <div className="flex items-center gap-2">
