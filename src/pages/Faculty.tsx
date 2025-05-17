@@ -151,12 +151,11 @@ const Faculty = () => {
       </section>
 
       <div className="container mx-auto px-4 py-12">
-        <p className="text-gray-700 mb-12 max-w-4xl">
+        <p className="text-gray-700 mx-auto mb-12 max-w-4xl text-center">
           Our department has highly qualified and experienced faculty members dedicated to providing 
           quality education and mentoring to students. They bring a wealth of knowledge from both 
           academia and industry to ensure our students receive the best possible education.
         </p>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {facultyMembers.map((faculty) => (
             <Card key={faculty.id} className="overflow-hidden shadow-md card-hover-effect">
