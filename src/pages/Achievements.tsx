@@ -16,6 +16,20 @@ const Achievements = () => {
       issuedBy: "Rao Associates",
       topic: "Internship",
     },
+
+    {
+      studentName: "B. Pavan Babu",
+      rollNo: "22891A1207",
+      issuedBy: "Rao Associates",
+      topic: "Internship",
+    },
+
+    {
+      studentName: "Chiluveru Navya Sri, M Sai Rithika, Sai Rishika Madala",
+      rollNo: "22891A1213, 22891A1232, 22891A1251",
+      issuedBy: "StartupIndia",
+      topic: "Internship",
+    },
   ];
 
   return (
