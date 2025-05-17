@@ -156,13 +156,13 @@ const Faculty = () => {
       id: 103,
       name: "G Disendra Kumar",
       position: "System / Network Admin",
-      image: "/a2.jpeg" // You can use a placeholder image
+      image: "/a3.jpeg" // You can use a placeholder image
     },
     {
       id: 104,
       name: "V Venu madhav",
       position: "System / Network Admin",
-      image: "/a3.jpeg" // You can use a placeholder image
+      image: "/a2.jpeg" // You can use a placeholder image
     },
 
     {
