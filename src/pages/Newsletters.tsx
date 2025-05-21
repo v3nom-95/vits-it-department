@@ -10,7 +10,7 @@ const newsletters = [
 		volume: "Volume 1",
 		cover: "/nl.png",
 		pdf: "https://drive.google.com/file/d/16ENGb6drxbzul8fK0s-nAaU0Vyhz848Z/view?usp=sharing", // Replace with actual Google Drive link
-		date: "January 2025",
+		date: "July 2024 to December 2024",
 		description:
 			"Inaugural edition featuring department highlights, student achievements, and industry collaborations.",
 	},
@@ -18,7 +18,7 @@ const newsletters = [
 		volume: "Volume 2",
 		cover: "/nl.png",
 		pdf: "https://drive.google.com/file/d/1-JHobfn7eTkcFMTrUYcRAk5oH3EWKih9/view?usp=sharing", // Replace with actual Google Drive link
-		date: "May 2025",
+		date: "January 2025 to June 2025",
 		description:
 			"Second edition with research spotlights, club activities, and placement success stories.",
 	},
