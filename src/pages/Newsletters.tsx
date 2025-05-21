@@ -41,13 +41,12 @@ const Newsletters = () => {
 						Department Newsletters
 					</h1>
 					<p className="text-xl text-gray-600 max-w-2xl mx-auto">
-						Stay updated with our department’s latest news, achievements, and
-						events. Browse and read our beautifully designed newsletters in PDF
-						format.
+						Stay updated with our department’s latest news, achievements, and events. Browse and read our beautifully designed newsletters in PDF format.
 					</p>
 					<div className="w-20 h-1 bg-department-accent mx-auto mt-6"></div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<h2 className="col-span-full text-2xl font-semibold text-department-accent mb-4 text-center">Academic year 2024-2025</h2>
 					{newsletters.map((nl, idx) => (
 						<Card
 							key={idx}
