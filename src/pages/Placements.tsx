@@ -3,7 +3,7 @@ import Papa from 'papaparse'; // Install with: npm install papaparse
 import Layout from '../components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTOONDb2kjS3MTFvUOxhttw3DJywXbngmnNGL0YuPX99lgD9_rORfGTyIWvzoV-_sx0ODAwHz9A4fZz/pub?gid=0&single=true&output=csv&gid=0'; // Replace with actual URL
+const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR0YrL_-K8ffPKIelEfprG9LU8wg5tjvpJs7orx9dLv1Coa3uGjJcmrDi4awxm6ng/pub?output=csv'; // Replace with actual URL
 
 const Placements = () => {
   const [placementData, setPlacementData] = useState([]);
