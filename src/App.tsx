@@ -13,6 +13,7 @@ import Achievements from "./pages/Achievements";
 import Research from "./pages/Research";
 import Placements from "./pages/Placements";
 import MOUs from './pages/MOUs';
+import Newsletters from './pages/Newsletters';
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/placements" element={<Placements />} />
             <Route path="/iii" element={<IndustryInteraction />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/newsletters" element={<Newsletters />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
