@@ -23,12 +23,17 @@ const Achievements = () => {
       topic: "Internship",
     },
 
-    
+    {
+      studentName: "Canjeevaram Raju Hrithik, Chiluveru Navya Sri, M Sai Rithika, Sai Rishika Madala",
+      rollNo: "22891A1211, 22891A1213, 22891A1232, 22891A1251",
+      issuedBy: "StartupIndia",
+      topic: "Internship",
+    },
 
     {
-      studentName: "Chiluveru Navya Sri, M Sai Rithika, Sai Rishika Madala",
-      rollNo: "22891A1213, 22891A1232, 22891A1251",
-      issuedBy: "StartupIndia",
+      studentName: "Bandigari Harichandana, Bobbala Rohith Reddy, Hapavath Nithin,Katukuri Vijitha,Komirishetty Keerthana,Dussa Greeshma,Peddi Sravani, Puralasetti Supriya, Rokandla Dhikshith Raj, Shaik Farha Begum, S Harshith Kumar Goud, Survi Aishwarya, Varakala Charvitha,Shaik Muskan, J Jagannath Preetham",
+      rollNo: "22891A1208, 22891A1209, 22891A1221, 22891A1226, 22891A1227, 22891A1228, 22891A1239, 22891A1244, 22891A1250, 22891A1255, 22891A1257, 22891A1258, 22891A1260, 23895A1203, 23895A1205",
+      issuedBy: "Collabaration of Swecha & IIT Hyderabad",
       topic: "Internship",
     },
   ];
@@ -52,8 +57,8 @@ const Achievements = () => {
                 <CardTitle className="text-xl text-department-blue font-semibold">{achievement.topic}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
-                <p className="text-gray-700"><strong>Student Name:</strong> {achievement.studentName}</p>
-                <p className="text-gray-700"><strong>Roll No.:</strong> {achievement.rollNo}</p>
+                <p className="text-gray-700 text-lowercase text-justify"><strong>Student Name:</strong> {achievement.studentName}</p>
+                <p className="text-gray-700 text-justify "><strong>Roll No.:</strong> {achievement.rollNo}</p>
                 <p className="text-gray-700"><strong>Issued By:</strong> {achievement.issuedBy}</p>
               </CardContent>
             </Card>

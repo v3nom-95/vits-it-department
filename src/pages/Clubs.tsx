@@ -237,7 +237,7 @@ const Clubs = () => {
       </section>
 
       <div className="container mx-auto px-4 py-12">
-        <p className="text-gray-700 mb-12 max-w-4xl">
+        <p className="text-gray-700 mb-12 max-w-4xl mx-auto text-center">
           The IT Department hosts several student-led clubs that provide opportunities for 
           hands-on learning, skill development, and networking. These clubs organize various 
           activities, workshops, competitions, and events throughout the academic year.
@@ -257,9 +257,13 @@ const Clubs = () => {
                       <CardTitle className={`text-2xl ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'}`}>{club.name}</CardTitle>
                       <CardDescription className="mt-2 text-base">{club.description}</CardDescription>
                     </div>
-                    <Badge variant={club.color === 'purple' ? 'default' : 'secondary'} className={`${club.color === 'purple' ? 'bg-department-purple' : 'bg-department-blue'}`}>
+                    <Badge
+                        variant="default"
+                        className={`w-24 h-8 text-sm flex items-center justify-center whitespace-nowrap ${club.color === 'purple' ? 'bg-department-purple' : 'bg-department-blue'}`}
+                    >
                       Est. {club.established}
                     </Badge>
+
                   </div>
                 </CardHeader>
                 <CardContent className="pt-6">
