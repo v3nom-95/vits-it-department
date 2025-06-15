@@ -10,23 +10,39 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-department-purple/10 to-department-blue/10 py-16 md:py-24 transform-gpu will-change-auto">
+      <section className="bg-gradient-to-r from-department-purple/10 to-department-blue/10 md:py-12 transform-gpu will-change-auto">
+        <div className="container mx-auto px-4 transform-gpu will-change-auto text-center">
+
+          <div className="flex items-center mb-6 text-center justify-center">
+            <img src="/vait-logo.png" alt="VAIT Department Logo" className="h-16 w-16 mr-4 rounded-full shadow-md" />
+            <h1 className="text-4xl md:text-4xl font-bold text-department-dark leading-tight transform-gpu will-change-auto text-center">
+              Department of <span className="text-department-purple transform-gpu will-change-auto">Information Technology</span>
+            </h1>
+          </div>
+          <p className="text-gray-700 text-lg mb-8 transform-gpu will-change-auto">
+            Shaping the future through innovation, quality education, and technological excellence. Join us in our journey to create tomorrow's IT leaders.
+          </p>
+        </div>
         <div className="container mx-auto px-4 transform-gpu will-change-auto">
           <div className="flex flex-col md:flex-row items-center transform-gpu will-change-auto">
             <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12 animate-fade-in transform-gpu will-change-auto">
-              <div className="flex items-center mb-6">
-                <img src="/vait-logo.png" alt="VAIT Department Logo" className="h-16 w-16 mr-4 rounded-full shadow-md" />
-                <h1 className="text-4xl md:text-4xl font-bold text-department-dark leading-tight transform-gpu will-change-auto">
-                  Department of <span className="text-department-purple transform-gpu will-change-auto">Information Technology</span>
-                </h1>
-              </div>
-              <p className="text-gray-700 text-lg mb-8 transform-gpu will-change-auto">
-                Shaping the future through innovation, quality education, and technological excellence. Join us in our journey to create tomorrow's IT leaders.
-              </p>
+              <h3 className="text-4xl md:text-3xl font-bold text-department-purple leading-tight transform-gpu will-change-auto text-center">
+                Preface of the Department
+              </h3>
+            <div className="animate-fade-in transform-gpu will-change-auto" style={{ animationDelay: '0.2s' }}>
+              <img
+                  src="/Preface.jpeg"
+                  alt="Preface of IT Department"
+                  className="rounded-lg shadow-2xl w-full h-auto transform-gpu will-change-auto"
+              />
+            </div>
 
 
             </div>
             <div className="md:w-1/2 animate-fade-in transform-gpu will-change-auto" style={{ animationDelay: '0.2s' }}>
+              <h3 className="text-4xl md:text-3xl font-bold text-department-purple leading-tight transform-gpu will-change-auto text-center">
+                Placement Insights
+              </h3>
               <img 
                 src="/pr.jpeg" 
                 alt="IT Department" 

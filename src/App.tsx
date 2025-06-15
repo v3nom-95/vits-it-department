@@ -14,6 +14,7 @@ import Research from "./pages/Research";
 import Placements from "./pages/Placements";
 import MOUs from './pages/MOUs';
 import Newsletters from './pages/Newsletters';
+import EventsPage from "@/pages/Events.tsx";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/research" element={<Research />} />
             <Route path="/placements" element={<Placements />} />
             <Route path="/iii" element={<IndustryInteraction />} />
+            <Route path="/events" element={<EventsPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/newsletters" element={<Newsletters />} />
             <Route path="*" element={<NotFound />} />

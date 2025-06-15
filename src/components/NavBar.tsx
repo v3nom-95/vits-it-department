@@ -19,7 +19,8 @@ const NavBar = () => {
     { path: '/clubs', label: 'Clubs' },
     { path: '/achievements', label: 'Achievements' },
     { path: '/placements', label: 'Placements' },
-    { path: '/newsletters', label: 'Newsletters' }, // Added Newsletters before Contact
+    { path: '/events', label: 'Events' },
+    { path: '/newsletters', label: 'Newsletters' },
     { path: '/contact', label: 'Contact' }
   ];
 
