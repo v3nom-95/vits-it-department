@@ -117,3 +117,13 @@
     @apply font-heading text-3xl font-bold mb-6 text-department-dark relative after:absolute after:content-[''] after:w-20 after:h-1 after:bg-department-accent after:left-1/2 after:-translate-x-1/2 after:-bottom-2 text-center;
   }
 }
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+

@@ -7,10 +7,32 @@ import { Button } from '@/components/ui/button';
 const Index = () => {
   const [isGoalDialogOpen, setIsGoalDialogOpen] = useState(false);
 
+  //Events 
+  const events = [
+    "Essentials of Data Science with R (22nd & 3rd July 2025)",
+    "Mastering Academic Writing: A Comprehensive Guide to LaTeX (18th & 19th July 2025)",
+    "Programming Essentials in Python & Django (28th July to 1st August, 2025)",
+    "Zero to Live: Website Creation and Deployment (28th & 29th July 2025)",
+  ];
+
   return (
     <Layout>
+      {/* Marquee Events Section */}
+      
+      <div className="bg-blue border-y-2 border-yellow-400 py-2 overflow-hidden relative">
+        <div className="flex animate-marquee whitespace-nowrap">
+          {[...events, ...events].map((event, idx) => (
+            <span key={idx} className="text-yellow-800 font-semibold mx-4 flex-shrink-0">
+              📢 {event}
+            </span>
+          ))}
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-department-purple/10 to-department-blue/10 md:py-12 transform-gpu will-change-auto">
+          
+
         <div className="container mx-auto px-4 transform-gpu will-change-auto text-center">
 
           <div className="flex items-center mb-6 text-center justify-center">

@@ -42,6 +42,18 @@ const Faculty = () => {
       image: "/nk.jpeg"
     },
     {
+      id: 12,
+      name: "K. Shiva Rama Krishna",
+      position: "Associate Professor",
+      qualification: "M.Tech in Computer Science",
+      experience: "8 years of teaching and 4 years of industry experience",
+      specialization: "Computer Networks, Cloud Computing",
+      email: "rajesh.kumar@vits.ac.in",
+      publications: 12,
+      awards: "Young Scientist Award 2020",
+      image: "/srk.jpeg"
+    },
+    {
       id: 4,
       name: "Mr. Sk. Khaleelullah",
       position: "Assistant Professor",

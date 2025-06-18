@@ -6,34 +6,66 @@ import Layout from '../components/Layout';
 interface EventItem {
     title: string;
     date: string;
+    type: string;
+    participants: string;
+    organisedby: string; 
+}
+
+interface EventItem2 {
+    title: string;
+    date: string;
     description: string;
     images: string[]; // support multiple images
 }
 
 interface EventsData {
     upcoming: EventItem[];
-    past: EventItem[];
+    past: EventItem2[];
 }
 
 const events: EventsData = {
     upcoming: [
         {
             title: 'Essentials of Data Science with R',
-            date: '30th June 2025',
-            description: '2 Days Workshop In Association with TASK for III Year Students',
-            images: [],
-        },
-        {
-            title: 'Zero to Live: Website Creation and Deployment',
-            date: '7th July 2025',
-            description: '2 Days Hands on Experience Workshop for III Year Students',
-            images: [],
+            date: '2nd & 3rd July 2025',
+            type: '2 - Day Workshop',
+            participants: 'III Year Students',
+            organisedby: 'TASK',
         },
         {
             title: 'Mastering Academic Writing: A Comprehensive Guide to LaTeX',
-            date: '26th July 2025',
-            description: '2 Days Hands on Experience Workshop for IV Year Students',
-            images: [],
+            date: '18th & 19th July 2025',
+            type: '2-Day Hands on Workshop',
+            participants:'IV Year Students',
+            organisedby: 'In House Faculty (M S B Kasyapa)',
+        },
+         {
+            title: 'Programming Essentials in Python & Django',
+            date: '28th July to 1st August, 2025',
+            type: '5 - Day Workshop',
+            participants: 'II Year Students',
+            organisedby: 'TASK',
+        },
+        {
+            title: 'Zero to Live: Website Creation and Deployment',
+            date: '28th & 29th July 2025',
+            type: '2- Day Hands on Workshop',
+            participants: 'III Year Students',
+            organisedby: 'In House Students',
+        },
+        {
+            title: 'Cloud Computing	',
+            date: '4th August to 6th August, 2025',
+            type: '3 - Day Workshop',
+            participants: 'IV Year Students',
+            organisedby: 'TASK',
+        },
+         {
+            title: 'Zero to Live: Website Creation and Deployment',
+            date: '11th & 13th August 2025',
+            type: '3- Day Hands on Workshop',
+            participants: 'III Year Students',
+            organisedby: 'In House Students',
         },
     ],
     past: [
@@ -61,8 +93,18 @@ const events: EventsData = {
 const UpcomingEventCard: React.FC<{ event: EventItem }> = ({ event }) => (
     <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
         <h3 className="text-xl font-bold text-department-purple mb-2">{event.title}</h3>
-        <p className="text-sm text-gray-600 mb-1">{event.date}</p>
-        <p className="text-md text-gray-700">{event.description}</p>
+        <p className="text-md text-gray-700">
+            <span className="text-department-purple font-semibold">Event : </span>{event.type}
+        </p>
+        <p className="text-sm text-gray-600 mb-1">
+            <span className="text-department-purple font-semibold">Date : </span>{event.date}
+        </p>
+        <p className="text-sm text-gray-600 mb-1">
+            <span className="text-department-purple font-semibold">Participants : </span>{event.participants}
+        </p>
+        <p className="text-md text-gray-700">
+            <span className="text-department-purple font-semibold">Organised By </span>{event.organisedby}
+        </p>
     </div>
 );
 
@@ -73,7 +115,7 @@ interface ModalState {
     currentIndex: number;
 }
 
-const PastEventCard: React.FC<{ event: EventItem; onSelectEvent: (event: EventItem) => void }> = ({ event, onSelectEvent }) => (
+const PastEventCard: React.FC<{ event: EventItem2; onSelectEvent: (event: EventItem2) => void }> = ({ event, onSelectEvent }) => (
     <div
         className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300 transform group"
         onClick={() => onSelectEvent(event)}
@@ -115,7 +157,7 @@ const EventsPage: React.FC = () => {
         return () => clearInterval(timer);
     }, [modalState]);
 
-    const handleSelectEvent = (event: EventItem) => {
+    const handleSelectEvent = (event: EventItem2) => {
         if (event.images.length > 0) {
             setModalState({
                 eventTitle: event.title,
