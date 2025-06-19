@@ -69,6 +69,13 @@ const events: EventsData = {
         },
     ],
     past: [
+        
+        {
+            title: 'Thank You Gurus',
+            date: 'June 19, 2025', 
+            description: 'Thank You Gurus is a sincere tribute from students to our beloved teachers.',
+            images: ['/events/tg1.jpeg', '/events/tg2.jpeg','/events/tg3.jpeg','/events/tg4.jpeg','/events/tg5.jpeg'],
+        },
         {
             title: 'Farewell for 2021 - 2025 batch',
             date: 'June 14, 2025', // Note: Corrected to current year based on prompt context
