@@ -34,7 +34,7 @@ const events: EventsData = {
         },
         {
             title: 'Mastering Academic Writing: A Comprehensive Guide to LaTeX',
-            date: '18th - 20th July 2025',
+            date: '18th & 19th July 2025',
             type: '2-Day Hands on Workshop',
             participants:'IV Year Students',
             organisedby: 'In House Faculty (M S B Kasyapa)',
@@ -48,8 +48,8 @@ const events: EventsData = {
         },
         {
             title: 'Zero to Live: Website Creation and Deployment',
-            date: '28th & 29th July 2025',
-            type: '2- Day Hands on Workshop',
+            date: '28th - 30th July 2025',
+            type: '3- Day Hands on Workshop',
             participants: 'III Year Students',
             organisedby: 'In House Students',
         },

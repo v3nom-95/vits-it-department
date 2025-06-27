@@ -9,10 +9,12 @@ const Index = () => {
 
   //Events 
   const events = [
-    "Essentials of Data Science with R (22nd & 3rd July 2025)",
+    "Essentials of Data Science with R (02nd & 03rd July 2025)",
     "Mastering Academic Writing: A Comprehensive Guide to LaTeX (18th & 19th July 2025)",
     "Programming Essentials in Python & Django (28th July to 1st August, 2025)",
-    "Zero to Live: Website Creation and Deployment (28th & 29th July 2025)",
+    "Zero to Live: Website Creation and Deployment (28th & 30th July 2025)",
+    "Cloud Computing (4th - 6th August, 2025)",
+    "Zero to Live: Website Creation and Deployment (11th - 13th August 2025)",
   ];
 
   return (
@@ -20,7 +22,7 @@ const Index = () => {
       {/* Marquee Events Section */}
       
       <div className="bg-blue border-y-2 border-yellow-400 py-2 overflow-hidden relative">
-        <div className="flex animate-marquee whitespace-nowrap">
+        <div className="flex animate-marquee whitespace-nowrap"> <span className="md:px-16 text-purple-600 font-bold">Upcoming Events : </span>
           {[...events, ...events].map((event, idx) => (
             <span key={idx} className="text-yellow-800 font-semibold mx-4 flex-shrink-0">
               📢 {event}
