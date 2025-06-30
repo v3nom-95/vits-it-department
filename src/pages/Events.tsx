@@ -1,6 +1,7 @@
 // pages/EventsPage.tsx
 
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom'; // Import createPortal
 import Layout from '../components/Layout';
 
 interface EventItem {
@@ -233,13 +234,19 @@ const EventsPage: React.FC = () => {
             </section>
 
             {/* Image Carousel Modal */}
-            {modalState && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4">
-                    <div className="relative bg-white rounded-lg shadow-xl max-w-2xl w-full mx-auto p-6 md:p-8">
+            {modalState && createPortal(
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-80 z-50 p-4 grid place-items-center"
+                    onClick={() => setModalState(null)} // Close on overlay click
+                >
+                    <div
+                        className="relative bg-white rounded-lg shadow-xl max-w-2xl w-full p-6 md:p-8 overflow-y-auto max-h-[90vh]"
+                        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal content
+                    >
                         {/* Close Button */}
                         <button
                             onClick={() => setModalState(null)}
-                            className="absolute -top-3 -right-3 bg-red-600 text-white rounded-full p-2 text-sm font-bold opacity-90 hover:opacity-100 transition-opacity duration-200 z-50 shadow-md"
+                            className="absolute top-2 right-2 bg-gray-200 text-gray-700 rounded-full p-1 hover:bg-gray-300 transition-colors duration-200 z-50"
                             aria-label="Close"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -288,7 +295,8 @@ const EventsPage: React.FC = () => {
                             )}
                         </div>
                     </div>
-                </div>
+                </div>,
+                document.body // Render the modal directly into the document body
             )}
         </Layout>
     );
