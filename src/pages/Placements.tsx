@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Papa from 'papaparse';
 import Layout from '../components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { createPortal } from 'react-dom'; // Import createPortal
 
 // Convert Google Drive link to embeddable preview link
 const getEmbedLink = (url: string) => {
@@ -16,16 +17,22 @@ const ReportModal = React.forwardRef(({ isOpen, onClose, src }: any, ref: any) =
     return (
         <div
             ref={ref}
-            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[1000] p-4"
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[1000] p-4 cursor-pointer" // Added cursor-pointer
+            onClick={onClose} // Close on overlay click
         >
-            <div className="bg-white rounded-lg shadow-xl w-full max-w-2xl h-[90vh] flex flex-col relative">
+            <div
+                className="bg-white rounded-lg shadow-xl w-full max-w-2xl h-[90vh] flex flex-col relative"
+                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal content
+            >
                 {/* Close Button */}
                 <button
                     onClick={onClose}
-                    className="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-3xl font-bold p-2 z-10"
+                    className="absolute top-2 right-2 bg-gray-200 text-gray-700 rounded-full p-1 hover:bg-gray-400 transition-colors duration-200 z-10 cursor-pointer" // Changed hover:bg-gray-300 to hover:bg-gray-400 and added cursor-pointer
                     aria-label="Close"
                 >
-                    &times;
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
                 </button>
 
                 {/* Content Area */}
@@ -184,12 +191,15 @@ const Placements = () => {
             </div>
 
             {/* Report Modal */}
-            <ReportModal
-                ref={modalRef}
-                isOpen={isModalOpen}
-                onClose={closeModal}
-                src={currentReportLink}
-            />
+            {isModalOpen && createPortal(
+                <ReportModal
+                    ref={modalRef}
+                    isOpen={isModalOpen}
+                    onClose={closeModal}
+                    src={currentReportLink}
+                />,
+                document.body // Render the modal directly into the document body
+            )}
         </Layout>
     );
 };
