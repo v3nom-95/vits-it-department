@@ -9,7 +9,6 @@ const Index = () => {
 
   //Events 
   const events = [
-    "Essentials of Data Science with R (02nd & 03rd July 2025)",
     "Mastering Academic Writing: A Comprehensive Guide to LaTeX (18th & 19th July 2025)",
     "Programming Essentials in Python & Django (28th July to 1st August, 2025)",
     "Zero to Live: Website Creation and Deployment (28th & 30th July 2025)",

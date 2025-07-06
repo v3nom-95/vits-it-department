@@ -27,13 +27,6 @@ interface EventsData {
 const events: EventsData = {
     upcoming: [
         {
-            title: 'Essentials of Data Science with R',
-            date: '2nd & 3rd July 2025',
-            type: '2 - Day Workshop',
-            participants: 'III Year Students',
-            organisedby: 'TASK',
-        },
-        {
             title: 'Mastering Academic Writing: A Comprehensive Guide to LaTeX',
             date: '18th & 19th July 2025',
             type: '2-Day Hands on Workshop',
@@ -70,7 +63,13 @@ const events: EventsData = {
         },
     ],
     past: [
-        
+        {
+            title: 'Essentials of Data Science with R',
+            date: '2nd & 3rd July 2025',
+            description: 'This 2-day workshop introduces students to the fundamentals of data science with R, supporting project-based learning for Data Analytics and Machine Learning.',
+            images: ['/events/DA1.jpg', '/events/DA2.jpg','/events/DA3.jpg','/events/DA4.jpg','/events/DA5.jpg'],
+        },
+
         {
             title: 'Thank You Gurus',
             date: 'June 19, 2025', 
@@ -142,6 +141,9 @@ const PastEventCard: React.FC<{ event: EventItem2; onSelectEvent: (event: EventI
         <div className="p-4">
             <h3 className="text-xl font-bold text-department-purple mb-1 group-hover:text-department-blue transition-colors duration-300">{event.title}</h3>
             <p className="text-sm text-gray-500">{event.date}</p>
+        </div>
+        <div className="p-2">
+            <p className="text-sm text-department-blue">{event.description}</p>
         </div>
     </div>
 );
