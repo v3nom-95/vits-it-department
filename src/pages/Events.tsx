@@ -85,7 +85,7 @@ const events: EventsData = {
         {
             title: 'Database Programming With SQL',
             date: 'April 15, 2025',
-            description: '3 Days Work shop on SQL Programming in association TASK for II Year Students.',
+            description: '3 Days Work shop on SQL Programming in association with TASK.',
             images: ['/events/dbms1.jpeg', '/events/dbms2.jpeg', '/events/dbms3.jpeg'],
         },
         {
