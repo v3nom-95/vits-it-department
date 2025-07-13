@@ -64,6 +64,12 @@ const events: EventsData = {
     ],
     past: [
         {
+            title: 'Visit to Tech Mahindra',
+            date: 'July 12, 2025',
+            description: 'A visit to Tech Mahindra to explore industry practices and innovations.',
+            images: ['/public/t2.jpeg', '/public/t3.jpeg', '/public/t4.jpeg', '/public/t1.jpeg'],
+        },
+        {
             title: 'Essentials of Data Science with R',
             date: '2nd & 3rd July 2025',
             description: 'This 2-day workshop introduces students to the fundamentals of data science with R, supporting project-based learning for Data Analytics and Machine Learning.',
@@ -94,6 +100,7 @@ const events: EventsData = {
             description: 'A vibrant celebration of departmental camaraderie, achievements, and collective spirit.',
             images: ['/events/DepartmentDay1.jpeg', '/events/DepartmentDay2.jpeg', '/events/DepartmentDay3.jpeg', '/events/DepartmentDay4.jpeg', '/events/DepartmentDay5.jpeg', '/events/DepartmentDay6.jpeg'],
         },
+        
     ],
 };
 
