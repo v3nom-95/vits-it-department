@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '../components/Layout';
 import { Button } from "@/components/ui/button";
@@ -21,36 +20,36 @@ const Contact = () => {
 
   return (
     <Layout>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8 text-department-dark">Contact Us</h1>
+      <div className="container mx-auto px-2 sm:px-4 py-6 sm:py-8">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-department-dark">Contact Us</h1>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           <div>
             <Card className="shadow-md">
-              <CardContent className="p-6">
-                <h2 className="text-xl font-semibold mb-4">Send us a message</h2>
+              <CardContent className="p-4 sm:p-6">
+                <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Send us a message</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="block text-sm font-medium">Full Name</label>
-                    <Input id="name" placeholder="Enter your name" required />
+                    <label htmlFor="name" className="block text-xs sm:text-sm font-medium">Full Name</label>
+                    <Input id="name" placeholder="Enter your name" required className="w-full focus:ring-2 focus:ring-department-purple" />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-medium">Email Address</label>
-                    <Input id="email" type="email" placeholder="Enter your email" required />
+                    <label htmlFor="email" className="block text-xs sm:text-sm font-medium">Email Address</label>
+                    <Input id="email" type="email" placeholder="Enter your email" required className="w-full focus:ring-2 focus:ring-department-purple" />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="subject" className="block text-sm font-medium">Subject</label>
-                    <Input id="subject" placeholder="Enter subject" required />
+                    <label htmlFor="subject" className="block text-xs sm:text-sm font-medium">Subject</label>
+                    <Input id="subject" placeholder="Enter subject" required className="w-full focus:ring-2 focus:ring-department-purple" />
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="message" className="block text-sm font-medium">Message</label>
-                    <Textarea id="message" placeholder="Type your message here..." rows={5} required />
+                    <label htmlFor="message" className="block text-xs sm:text-sm font-medium">Message</label>
+                    <Textarea id="message" placeholder="Type your message here..." rows={5} required className="w-full focus:ring-2 focus:ring-department-purple" />
                   </div>
                   
-                  <Button type="submit" className="w-full bg-department-purple hover:bg-purple-800">Send Message</Button>
+                  <Button type="submit" className="w-full bg-department-purple hover:bg-purple-800 focus:ring-2 focus:ring-purple-800">Send Message</Button>
                 </form>
               </CardContent>
             </Card>

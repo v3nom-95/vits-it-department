@@ -105,7 +105,7 @@ const events: EventsData = {
 };
 
 const UpcomingEventCard: React.FC<{ event: EventItem }> = ({ event }) => (
-    <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300 w-full">
+    <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300 w-full cursor-pointer focus:ring-2 focus:ring-department-purple outline-none" tabIndex={0} aria-label={`Event: ${event.title}`}> 
         <h3 className="text-lg sm:text-xl font-bold text-department-purple mb-2">{event.title}</h3>
         <p className="text-md text-gray-700">
             <span className="text-department-purple font-semibold">Event : </span>{event.type}
@@ -131,8 +131,11 @@ interface ModalState {
 
 const PastEventCard: React.FC<{ event: EventItem2; onSelectEvent: (event: EventItem2) => void }> = ({ event, onSelectEvent }) => (
     <div
-        className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300 transform group w-full"
+        className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300 transform group w-full focus:ring-2 focus:ring-department-blue outline-none"
         onClick={() => onSelectEvent(event)}
+        tabIndex={0}
+        aria-label={`Past Event: ${event.title}`}
+        onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') onSelectEvent(event); }}
     >
         {event.images.length > 0 ? (
             <img
@@ -198,7 +201,7 @@ const EventsPage: React.FC = () => {
 
     return (
         <Layout>
-            <section className="py-8 sm:py-12 bg-gradient-to-r from-department-purple/10 to-department-blue/10 min-h-screen">
+            <section className="py-6 sm:py-12 bg-gradient-to-r from-department-purple/10 to-department-blue/10 min-h-screen">
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl font-extrabold text-center text-department-purple mb-12">
                         Department Events & Highlights
@@ -209,7 +212,7 @@ const EventsPage: React.FC = () => {
                         <h2 className="text-3xl font-semibold text-department-blue mb-8 border-b-2 pb-2 border-department-blue/50">
                             Upcoming Events
                         </h2>
-                        <div className="grid gap-6 sm:gap-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3">
+                        <div className="grid gap-4 sm:gap-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3">
                             {events.upcoming.length > 0 ? (
                                 events.upcoming.map((event, idx) => (
                                     <UpcomingEventCard key={`upcoming-${idx}`} event={event} />
@@ -225,7 +228,7 @@ const EventsPage: React.FC = () => {
                         <h2 className="text-3xl font-semibold text-department-blue mb-8 border-b-2 pb-2 border-department-blue/50">
                             Recent Events Snapshots
                         </h2>
-                        <div className="grid gap-6 sm:gap-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3">
+                        <div className="grid gap-4 sm:gap-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3">
                             {events.past.length > 0 ? (
                                 events.past.map((event, idx) => (
                                     <PastEventCard
@@ -247,6 +250,9 @@ const EventsPage: React.FC = () => {
                 <div
                     className="fixed inset-0 bg-black bg-opacity-80 z-50 p-2 sm:p-4 grid place-items-center overflow-y-auto"
                     onClick={() => setModalState(null)} // Close on overlay click
+                    tabIndex={-1}
+                    aria-modal="true"
+                    role="dialog"
                 >
                     <div
                         className="relative bg-white rounded-lg shadow-xl w-full max-w-xs sm:max-w-2xl p-3 sm:p-6 md:p-8 overflow-y-auto max-h-[90vh]"
