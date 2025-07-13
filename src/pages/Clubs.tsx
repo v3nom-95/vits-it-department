@@ -236,14 +236,14 @@ const Clubs = () => {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-12">
-        <p className="text-gray-700 mb-12 max-w-4xl mx-auto text-center">
+      <div className="container mx-auto px-2 sm:px-4 py-8 sm:py-12">
+        <p className="text-gray-700 mb-8 sm:mb-12 max-w-4xl mx-auto text-center text-sm sm:text-base">
           The IT Department hosts several student-led clubs that provide opportunities for 
           hands-on learning, skill development, and networking. These clubs organize various 
           activities, workshops, competitions, and events throughout the academic year.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {clubs.map((club) => (
             <div key={club.id}>
               <Card 
@@ -252,47 +252,44 @@ const Clubs = () => {
                 onClick={() => { setSelectedClub(club); setShowClubDetails(true); }}
               >
                 <CardHeader className={`bg-gradient-to-r ${club.color === 'purple' ? 'from-department-purple/5 to-department-purple/10' : 'from-department-blue/5 to-department-blue/10'}`}>
-                  <div className="flex justify-between items-start">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-start">
                     <div>
-                      <CardTitle className={`text-2xl ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'}`}>{club.name}</CardTitle>
-                      <CardDescription className="mt-2 text-base">{club.description}</CardDescription>
+                      <CardTitle className={`text-lg sm:text-2xl ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'}`}>{club.name}</CardTitle>
+                      <CardDescription className="mt-1 sm:mt-2 text-sm sm:text-base">{club.description}</CardDescription>
                     </div>
                     <Badge
                         variant="default"
-                        className={`w-24 h-8 text-sm flex items-center justify-center whitespace-nowrap ${club.color === 'purple' ? 'bg-department-purple' : 'bg-department-blue'}`}
+                        className={`w-20 sm:w-24 h-7 sm:h-8 text-xs sm:text-sm flex items-center justify-center whitespace-nowrap ${club.color === 'purple' ? 'bg-department-purple' : 'bg-department-blue'}`}
                     >
                       Est. {club.established}
                     </Badge>
-
                   </div>
                 </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="space-y-5">
-                    <div className="flex items-start gap-3">
-                      <Users className={`h-5 w-5 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'} mt-0.5`} />
+                <CardContent className="pt-4 sm:pt-6">
+                  <div className="space-y-3 sm:space-y-5">
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <Users className={`h-4 w-4 sm:h-5 sm:w-5 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'} mt-0.5`} />
                       <div>
-                        <p className="font-semibold">Club Details</p>
-                        <p>Active Members: {club.members}</p>
+                        <p className="font-semibold text-xs sm:text-base">Club Details</p>
+                        <p className="text-xs sm:text-base">Active Members: {club.members}</p>
                       </div>
                     </div>
-
-                    <div className="flex items-start gap-3">
-                      <Award className={`h-5 w-5 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'} mt-0.5`} />
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <Award className={`h-4 w-4 sm:h-5 sm:w-5 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'} mt-0.5`} />
                       <div>
-                        <p className="font-semibold">Activities</p>
-                        <ul className="list-disc pl-5">
+                        <p className="font-semibold text-xs sm:text-base">Activities</p>
+                        <ul className="list-disc pl-4 sm:pl-5 text-xs sm:text-base">
                           {club.activities.map((activity, index) => (
                             <li key={index}>{activity}</li>
                           ))}
                         </ul>
                       </div>
                     </div>
-
-                    <div className="flex items-start gap-3">
-                      <Users className={`h-5 w-5 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'} mt-0.5`} />
+                    <div className="flex items-start gap-2 sm:gap-3">
+                      <Users className={`h-4 w-4 sm:h-5 sm:w-5 ${club.color === 'purple' ? 'text-department-purple' : 'text-department-blue'} mt-0.5`} />
                       <div>
-                        <p className="font-semibold">Student Coordinators</p>
-                        <ul className="list-disc pl-5">
+                        <p className="font-semibold text-xs sm:text-base">Student Coordinators</p>
+                        <ul className="list-disc pl-4 sm:pl-5 text-xs sm:text-base">
                           {club.studentCoordinators?.map((coordinator, index) => (
                             <li key={index}>{coordinator}</li>
                           ))}
@@ -309,7 +306,7 @@ const Clubs = () => {
 
       {/* Club Details Overlay Dialog */}
       <Dialog open={showClubDetails} onOpenChange={setShowClubDetails}>
-        <DialogContent className="max-w-4xl sm:max-w-[800px]">
+        <DialogContent className="max-w-xs sm:max-w-4xl sm:max-w-[800px] w-full">
           <DialogHeader>
             <DialogTitle className="text-2xl">{selectedClub?.name} Events</DialogTitle>
           </DialogHeader>
@@ -344,7 +341,7 @@ const Clubs = () => {
 
       {/* Event Details Dialog */}
       <Dialog open={showEventDetails} onOpenChange={setShowEventDetails}>
-        <DialogContent className="max-w-5xl sm:max-w-[900px]">
+        <DialogContent className="max-w-xs sm:max-w-5xl sm:max-w-[900px] w-full">
           <DialogHeader>
             <DialogTitle className="text-xl">{selectedEvent?.title}</DialogTitle>
             <DialogDescription>Event Details</DialogDescription>
@@ -434,7 +431,7 @@ const Clubs = () => {
                   <CarouselNext className="right-2" />
                 </Carousel>
                 
-                <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 mt-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mt-4">
                   {selectedEvent?.photos.map((photo, index) => (
                     <div key={index} className="overflow-hidden rounded-md aspect-[4/3]">
                       <img 
