@@ -67,7 +67,7 @@ const events: EventsData = {
             title: 'Visit to Tech Mahindra',
             date: 'July 12, 2025',
             description: 'A visit to Tech Mahindra to explore industry practices and innovations.',
-            images: ['/public/t2.jpeg', '/public/t3.jpeg', '/public/t4.jpeg', '/public/t1.jpeg'],
+            images: ['/t2.jpeg', '/t3.jpeg', '/t4.jpeg', '/t1.jpeg'],
         },
         {
             title: 'Essentials of Data Science with R',
